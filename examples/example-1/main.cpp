@@ -1,12 +1,15 @@
 #include "RawProcess.h"
-#include "windows.h"
 #include <iostream>
-#include <cmath>
-#include <thread>
 
 int main()
 {
 	RawProcess Process(8020);
+
+	if (!Process.IsOpened())
+	{
+		std::cout << "Can't open a process" << std::endl;
+		return 1;
+	}
 
 	Process.Update();
 	std::cout << Process.GetStatistics().CPUUsage << std::endl;

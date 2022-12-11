@@ -7,6 +7,8 @@
 void RawProcess::Close()
 {
 	CloseHandle(Handle);
+
+	ClearData();
 }
 
 bool RawProcess::IsOpened() const
@@ -21,9 +23,13 @@ RawProcess::RawProcess(RawProcess&& Other)
 
 RawProcess& RawProcess::operator=(RawProcess&& Other)
 {
-	*this = Other;
+	Handle = Other.Handle;
+	LastCPU = Other.LastCPU;
+	LastSysCPU = Other.LastSysCPU;
+	LastUserCPU = Other.LastUserCPU;
+	Statistics_ = Other.Statistics_;
 
-	Other.Handle = {};
+	Other.ClearData();
 
 	return *this;
 }
@@ -38,14 +44,16 @@ RawProcess::RawProcess(DWORD Pid)
 	Open(Pid);
 }
 
-bool RawProcess::Open(DWORD Pid)
+bool RawProcess::Open(DWORD PID)
 {
 	if (IsOpened())
 	{
 		Close();
 	}
 
-	Handle = OpenProcess(PROCESS_ALL_ACCESS, TRUE, Pid);
+	Handle = OpenProcess(PROCESS_ALL_ACCESS, TRUE, PID);
+
+	Statistics_.PID = PID;
 
 	InitCPUTracker();
 
@@ -110,4 +118,13 @@ double RawProcess::GetCpuUsage()
 		percent = 0.;
 
 	return percent * 100.;
+}
+
+void RawProcess::ClearData()
+{
+	Handle = {};
+	LastCPU = {};
+	LastSysCPU = {};
+	LastUserCPU = {};
+	Statistics_ = {};
 }
