@@ -62,12 +62,15 @@ bool RawProcess::Open(DWORD PID)
 	}
 
 	Handle = OpenProcess(PROCESS_ALL_ACCESS, TRUE, PID);
-
-	Statistics_.PID = PID;
+	if (!IsOpened())
+		return false;
 
 	CPUTracker_.InitCPUTracker();
 
-	return IsOpened();
+	Statistics_.PID = PID;
+	Statistics_.Name = ProcessIdToName(PID);
+
+	return true;
 }
 
 HANDLE RawProcess::Data()
@@ -95,4 +98,33 @@ void RawProcess::ClearData()
 	Handle = {};
 	Statistics_ = {};
 	CPUTracker_.ClearData();
+}
+
+std::string RawProcess::ProcessIdToName(DWORD processId)
+{
+	std::string ret;
+	HANDLE handle = OpenProcess(
+		PROCESS_QUERY_LIMITED_INFORMATION,
+		FALSE,
+		processId /* This is the PID, you can find one from windows task manager */
+	);
+	if (handle)
+	{
+		DWORD buffSize = 1024;
+		CHAR buffer[1024];
+		if (QueryFullProcessImageNameA(handle, 0, buffer, &buffSize))
+		{
+			ret = buffer;
+		}
+		else
+		{
+			printf("Error GetModuleBaseNameA : %lu", GetLastError());
+		}
+		CloseHandle(handle);
+	}
+	else
+	{
+		printf("Error OpenProcess : %lu", GetLastError());
+	}
+	return ret;
 }

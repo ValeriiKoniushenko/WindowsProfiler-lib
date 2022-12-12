@@ -33,3 +33,23 @@ bool TaskManager::Scan()
 
 	return true;
 }
+
+std::vector<RawProcess>::iterator TaskManager::begin()
+{
+	return Processes.begin();
+}
+
+std::vector<RawProcess>::const_iterator TaskManager::begin() const
+{
+	return Processes.cbegin();
+}
+
+std::vector<RawProcess>::iterator TaskManager::end()
+{
+	return Processes.end();
+}
+
+std::vector<RawProcess>::const_iterator TaskManager::end() const
+{
+	return Processes.cend();
+}

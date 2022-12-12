@@ -4,15 +4,18 @@
 #include "MemoryTracker.h"
 #include "Object.h"
 
+#include <string>
+
 class RawProcess : public Object
 {
 public:
 	struct Statistics
 	{
+		std::string Name;
 		double CPUUsage{};
 		DWORD PID{};
-		std::size_t RAMUsage;
-		std::size_t VirtualMemoryUsage;
+		std::size_t RAMUsage{};
+		std::size_t VirtualMemoryUsage{};
 	};
 
 	RawProcess();
@@ -35,7 +38,7 @@ public:
 
 private:
 	void ClearData() override;
-
+	std::string ProcessIdToName(DWORD processId);
 private:
 	HANDLE Handle{};
 	CPUTracker CPUTracker_;
