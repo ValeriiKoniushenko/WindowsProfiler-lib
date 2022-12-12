@@ -1,4 +1,5 @@
 #include "RawProcess.h"
+#include "Utils.h"
 #include <iostream>
 
 int main()
@@ -12,20 +13,12 @@ int main()
 	}
 
 	Process.Update();
-	std::cout << Process.GetStatistics().CPUUsage << std::endl;
 	Sleep(100);
 
 	Process.Update();
-	std::cout << Process.GetStatistics().CPUUsage << std::endl;
-	Sleep(100);
-
-	Process.Update();
-	std::cout << Process.GetStatistics().CPUUsage << std::endl;
-	Sleep(100);
-
-	Process.Update();
-	std::cout << Process.GetStatistics().CPUUsage << std::endl;
-
-
+	auto Statistics = Process.GetStatistics();
+	std::cout << Statistics.CPUUsage << std::endl;
+	std::cout << Utils::b2Mb(Statistics.RAMUsage) << std::endl;
+	std::cout << Utils::b2Mb(Statistics.VirtualMemoryUsage) << std::endl;
 	return 0;
 }

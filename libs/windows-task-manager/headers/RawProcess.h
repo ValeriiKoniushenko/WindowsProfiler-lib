@@ -1,17 +1,20 @@
 #pragma once
 
 #include "CPUTracker.h"
+#include "MemoryTracker.h"
+#include "Object.h"
 
-class RawProcess
+class RawProcess : public Object
 {
 public:
 	struct Statistics
 	{
-		double CPUUsage;
-		double PID;
+		double CPUUsage{};
+		DWORD PID{};
+		std::size_t RAMUsage;
+		std::size_t VirtualMemoryUsage;
 	};
 
-	RawProcess() = default;
 	RawProcess(DWORD Pid);
 	virtual ~RawProcess();
 	RawProcess(const RawProcess&) = delete;
@@ -30,13 +33,11 @@ public:
 	double GetCpuUsage();
 
 private:
-	void ClearData();
+	void ClearData() override;
 
 private:
 	HANDLE Handle{};
 	CPUTracker CPUTracker_;
+	MemoryTracker MemoryTracker_;
 	Statistics Statistics_;
-	ULARGE_INTEGER LastCPU{};
-	ULARGE_INTEGER LastSysCPU{};
-	ULARGE_INTEGER LastUserCPU{};
 };

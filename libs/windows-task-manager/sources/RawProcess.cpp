@@ -5,13 +5,15 @@
 #include <cmath>
 
 RawProcess::RawProcess(RawProcess&& Other) :
-	CPUTracker_(Handle)
+	CPUTracker_(Handle),
+	MemoryTracker_(Handle)
 {
 	*this = std::move(Other);
 }
 
 RawProcess::RawProcess(DWORD Pid) :
-	CPUTracker_(Handle)
+	CPUTracker_(Handle),
+	MemoryTracker_(Handle)
 {
 	Open(Pid);
 }
@@ -41,6 +43,8 @@ RawProcess& RawProcess::operator=(RawProcess&& Other)
 void RawProcess::Update()
 {
 	Statistics_.CPUUsage = CPUTracker_.GetCpuUsage();
+	Statistics_.RAMUsage = MemoryTracker_.RAMUsage();
+	Statistics_.VirtualMemoryUsage = MemoryTracker_.VirtualMemoryUsage();
 }
 
 bool RawProcess::Open(DWORD PID)
