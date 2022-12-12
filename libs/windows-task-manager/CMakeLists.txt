@@ -1,6 +1,12 @@
 add_library(
 	WindowsTaskManager
-	sources/RawProcess.cpp
+		sources/CPUTracker.cpp
+		sources/RawProcess.cpp
+		sources/Object.cpp
+
+		headers/CPUTracker.h
+		headers/RawProcess.h
+		headers/Object.h
 )
 
 target_include_directories(

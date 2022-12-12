@@ -1,7 +1,6 @@
 #pragma once
 
-#include <Windows.h>
-#include <tlhelp32.h>
+#include "CPUTracker.h"
 
 class RawProcess
 {
@@ -28,16 +27,16 @@ public:
 
 	Statistics GetStatistics() const;
 
-private:
-	void Assign(ULARGE_INTEGER& Left, FILETIME& Right);
-	void InitCPUTracker();
 	double GetCpuUsage();
+
+private:
 	void ClearData();
 
 private:
-	HANDLE Handle;
-	ULARGE_INTEGER LastCPU;
-	ULARGE_INTEGER LastSysCPU;
-	ULARGE_INTEGER LastUserCPU;
+	HANDLE Handle{};
+	CPUTracker CPUTracker_;
 	Statistics Statistics_;
+	ULARGE_INTEGER LastCPU{};
+	ULARGE_INTEGER LastSysCPU{};
+	ULARGE_INTEGER LastUserCPU{};
 };
