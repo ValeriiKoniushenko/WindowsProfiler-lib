@@ -15,6 +15,7 @@ public:
 		std::size_t VirtualMemoryUsage;
 	};
 
+	RawProcess();
 	RawProcess(DWORD Pid);
 	virtual ~RawProcess();
 	RawProcess(const RawProcess&) = delete;

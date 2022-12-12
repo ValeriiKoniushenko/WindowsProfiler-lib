@@ -18,6 +18,13 @@ RawProcess::RawProcess(DWORD Pid) :
 	Open(Pid);
 }
 
+RawProcess::RawProcess() :
+	CPUTracker_(Handle),
+	MemoryTracker_(Handle)
+{
+
+}
+
 void RawProcess::Close()
 {
 	CloseHandle(Handle);
