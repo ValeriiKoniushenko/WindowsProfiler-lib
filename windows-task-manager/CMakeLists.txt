@@ -1,5 +1,5 @@
 add_library(
-	WindowsTaskManager
+	WindowsTaskManager STATIC
 		sources/CPUTracker.cpp
 		sources/MemoryTracker.cpp
 		sources/Object.cpp
