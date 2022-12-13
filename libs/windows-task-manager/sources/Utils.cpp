@@ -6,17 +6,27 @@ namespace Utils
 std::string Uits2String(Unit U)
 {
 	if (U == Unit::b)
-		return { "b" };
+	{
+		return {"b"};
+	}
 	if (U == Unit::kb)
-		return { "kb" };
+	{
+		return {"kb"};
+	}
 	if (U == Unit::Mb)
-		return { "Mb" };
+	{
+		return {"Mb"};
+	}
 	if (U == Unit::Gb)
-		return { "Gb" };
+	{
+		return {"Gb"};
+	}
 	if (U == Unit::Tb)
-		return { "Tb" };
+	{
+		return {"Tb"};
+	}
 
-	return { "None" };
+	return {"None"};
 }
 
 double b2kb(std::size_t Bytes)
@@ -44,9 +54,11 @@ std::pair<double, Unit> b2Fit(std::size_t Bytes)
 	double result = Bytes;
 	int Units = 0;
 	while (result > 1000.)
+	{
 		result /= 1000., Units++;
+	}
 
-	return { result, static_cast<Unit>(Units) };
+	return {result, static_cast<Unit>(Units)};
 }
 
-}	// namespace Utils
+}	 // namespace Utils

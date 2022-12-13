@@ -2,9 +2,15 @@
 
 #include "Object.h"
 
+#include <string>
 #include <Windows.h>
 #include <tlhelp32.h>
 
+/**
+ * @class CPUTracker
+ * Hello world
+ * @brief about a class
+ */
 class CPUTracker : public Object
 {
 public:
@@ -19,6 +25,7 @@ public:
 
 	void InitCPUTracker();
 	double GetCpuUsage();
+	std::string GetPriority() const;
 
 private:
 	HANDLE* Handle{};

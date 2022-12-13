@@ -1,0 +1,32 @@
+\hypertarget{_utils_8h_source}{}\doxysection{Utils.\+h}
+\label{_utils_8h_source}\index{libs/windows-\/task-\/manager/headers/Utils.h@{libs/windows-\/task-\/manager/headers/Utils.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <utility>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_utils}{Utils}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{11 \textcolor{keyword}{enum class} \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit}}}
+\DoxyCodeLine{12 \{       \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edeca92eb5ffee6ae2fec3ad71c777531578f}{b}},     \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edecaba34ea40525a4379add785228e37fe86}{kb}},   \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edeca6dd757cbdd852a16f222a7d1a07eab3e}{Mb}},   \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edeca1c717215e36a6768f37353c8f554a7d8}{Gb}},   \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edecabd63cda5e59ddb168ec03847f26b831b}{Tb}}}
+\DoxyCodeLine{18 \};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{25 std::string \mbox{\hyperlink{namespace_utils_a3ef1777d4ea4fb42df165ab306868d39}{Uits2String}}(\mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit}} U);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{32 \textcolor{keywordtype}{double} \mbox{\hyperlink{namespace_utils_a074931515522dbaadc4094a014d1cebe}{b2kb}}(std::size\_t Bytes);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{39 \textcolor{keywordtype}{double} \mbox{\hyperlink{namespace_utils_a5a938350859b8b6194bdfc47e5324306}{b2Mb}}(std::size\_t Bytes);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{46 \textcolor{keywordtype}{double} \mbox{\hyperlink{namespace_utils_a1e7951607d67e4c2a1ebce31a2403586}{b2Gb}}(std::size\_t Bytes);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{53 \textcolor{keywordtype}{double} \mbox{\hyperlink{namespace_utils_ad4a2c433ae704a507fe0b5a91857822f}{b2Tb}}(std::size\_t Bytes);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{60 std::pair<double, Unit> \mbox{\hyperlink{namespace_utils_a6163616b95ae079814438f1f161bd957}{b2Fit}}(std::size\_t Bytes);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \}   \textcolor{comment}{// namespace Utils}}
+
+\end{DoxyCode}

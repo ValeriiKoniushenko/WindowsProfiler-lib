@@ -1,0 +1,203 @@
+\hypertarget{class_task_manager}{}\doxysection{Task\+Manager Class Reference}
+\label{class_task_manager}\index{TaskManager@{TaskManager}}
+
+
+{\ttfamily \#include $<$Task\+Manager.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{ContainerT}} = std\+::unordered\+\_\+map$<$ DWORD, \mbox{\hyperlink{class_raw_process}{Raw\+Process}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_task_manager_ab1adaa0f5b87d8fb26c09e7883fdd9fe}{Task\+Manager}} ()=default
+\item 
+\mbox{\hyperlink{class_task_manager_a0808832384678dec6c7832899cb9c72d}{$\sim$\+Task\+Manager}} ()=default
+\item 
+\mbox{\hyperlink{class_task_manager_aa507b7c7c7022cb35f6923b34d72e479}{Task\+Manager}} (const \mbox{\hyperlink{class_task_manager}{Task\+Manager}} \&)=delete
+\item 
+\mbox{\hyperlink{class_task_manager}{Task\+Manager}} \& \mbox{\hyperlink{class_task_manager_aa2d57c600af6cb7cc8ea779581a26128}{operator=}} (const \mbox{\hyperlink{class_task_manager}{Task\+Manager}} \&)=delete
+\item 
+\mbox{\hyperlink{class_task_manager_ae0eb341aea4d994c72e4267bb78d8658}{Task\+Manager}} (\mbox{\hyperlink{class_task_manager}{Task\+Manager}} \&\&)=delete
+\item 
+\mbox{\hyperlink{class_task_manager}{Task\+Manager}} \& \mbox{\hyperlink{class_task_manager_a47b3eb875f3aa797aa9b8e69531b76de}{operator=}} (\mbox{\hyperlink{class_task_manager}{Task\+Manager}} \&\&)=delete
+\item 
+bool \mbox{\hyperlink{class_task_manager_ae22ce618cca5baa8278e8b4935cffa33}{Scan}} ()
+\begin{DoxyCompactList}\small\item\em Helps to scan or rescan all processes in the Windows. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{ContainerT}} \& \mbox{\hyperlink{class_task_manager_aafd0f77892bdd40752e536da6731e7c2}{Get\+Processes}} ()
+\begin{DoxyCompactList}\small\item\em Helps to get all scanned processes. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{ContainerT}} \& \mbox{\hyperlink{class_task_manager_a6baac0015d027bc1ad0a7cfa9134d44e}{Get\+Processes}} () const
+\begin{DoxyCompactList}\small\item\em Helps to get all scanned processes. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_raw_process_1_1_statistics}{Raw\+Process\+::\+Statistics}} $>$ \mbox{\hyperlink{class_task_manager_a837605ffc01f898cb618a2511b37ef0b}{Extrude\+Statistics\+From\+Processes}} () const
+\begin{DoxyCompactList}\small\item\em Helps to extrude all Statistics from a processes. \end{DoxyCompactList}\item 
+Container\+T\+::iterator \mbox{\hyperlink{class_task_manager_a2c790a7fef3fddbf3fd70a7f29b5d1c2}{begin}} ()
+\item 
+Container\+T\+::const\+\_\+iterator \mbox{\hyperlink{class_task_manager_af77ffb0d53af5ce49ed9fff9f3134840}{begin}} () const
+\item 
+Container\+T\+::iterator \mbox{\hyperlink{class_task_manager_af617028497330f47719e7d4a60cf78d3}{end}} ()
+\item 
+Container\+T\+::const\+\_\+iterator \mbox{\hyperlink{class_task_manager_ac53f3867628c1f962bea8883dc72701d}{end}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{ContainerT}} \mbox{\hyperlink{class_task_manager_a83186e9b3a23b981a348405bff4daa4d}{Processes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}\label{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}} 
+\index{TaskManager@{TaskManager}!ContainerT@{ContainerT}}
+\index{ContainerT@{ContainerT}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{ContainerT}{ContainerT}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{Task\+Manager\+::\+ContainerT}} =  std\+::unordered\+\_\+map$<$DWORD, \mbox{\hyperlink{class_raw_process}{Raw\+Process}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_task_manager_ab1adaa0f5b87d8fb26c09e7883fdd9fe}\label{class_task_manager_ab1adaa0f5b87d8fb26c09e7883fdd9fe}} 
+\index{TaskManager@{TaskManager}!TaskManager@{TaskManager}}
+\index{TaskManager@{TaskManager}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{TaskManager()}{TaskManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Task\+Manager\+::\+Task\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_task_manager_a0808832384678dec6c7832899cb9c72d}\label{class_task_manager_a0808832384678dec6c7832899cb9c72d}} 
+\index{TaskManager@{TaskManager}!````~TaskManager@{$\sim$TaskManager}}
+\index{````~TaskManager@{$\sim$TaskManager}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$TaskManager()}{~TaskManager()}}
+{\footnotesize\ttfamily Task\+Manager\+::$\sim$\+Task\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_task_manager_aa507b7c7c7022cb35f6923b34d72e479}\label{class_task_manager_aa507b7c7c7022cb35f6923b34d72e479}} 
+\index{TaskManager@{TaskManager}!TaskManager@{TaskManager}}
+\index{TaskManager@{TaskManager}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{TaskManager()}{TaskManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Task\+Manager\+::\+Task\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_task_manager}{Task\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_task_manager_ae0eb341aea4d994c72e4267bb78d8658}\label{class_task_manager_ae0eb341aea4d994c72e4267bb78d8658}} 
+\index{TaskManager@{TaskManager}!TaskManager@{TaskManager}}
+\index{TaskManager@{TaskManager}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{TaskManager()}{TaskManager()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Task\+Manager\+::\+Task\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_task_manager}{Task\+Manager}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_task_manager_a2c790a7fef3fddbf3fd70a7f29b5d1c2}\label{class_task_manager_a2c790a7fef3fddbf3fd70a7f29b5d1c2}} 
+\index{TaskManager@{TaskManager}!begin@{begin}}
+\index{begin@{begin}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task\+Manager\+::\+Container\+T\+::iterator Task\+Manager\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_task_manager_af77ffb0d53af5ce49ed9fff9f3134840}\label{class_task_manager_af77ffb0d53af5ce49ed9fff9f3134840}} 
+\index{TaskManager@{TaskManager}!begin@{begin}}
+\index{begin@{begin}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Task\+Manager\+::\+Container\+T\+::const\+\_\+iterator Task\+Manager\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_task_manager_af617028497330f47719e7d4a60cf78d3}\label{class_task_manager_af617028497330f47719e7d4a60cf78d3}} 
+\index{TaskManager@{TaskManager}!end@{end}}
+\index{end@{end}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task\+Manager\+::\+Container\+T\+::iterator Task\+Manager\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_task_manager_ac53f3867628c1f962bea8883dc72701d}\label{class_task_manager_ac53f3867628c1f962bea8883dc72701d}} 
+\index{TaskManager@{TaskManager}!end@{end}}
+\index{end@{end}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Task\+Manager\+::\+Container\+T\+::const\+\_\+iterator Task\+Manager\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_task_manager_a837605ffc01f898cb618a2511b37ef0b}\label{class_task_manager_a837605ffc01f898cb618a2511b37ef0b}} 
+\index{TaskManager@{TaskManager}!ExtrudeStatisticsFromProcesses@{ExtrudeStatisticsFromProcesses}}
+\index{ExtrudeStatisticsFromProcesses@{ExtrudeStatisticsFromProcesses}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{ExtrudeStatisticsFromProcesses()}{ExtrudeStatisticsFromProcesses()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_raw_process_1_1_statistics}{Raw\+Process\+::\+Statistics}} $>$ Task\+Manager\+::\+Extrude\+Statistics\+From\+Processes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Helps to extrude all Statistics from a processes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector with Statistics 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_task_manager_aafd0f77892bdd40752e536da6731e7c2}\label{class_task_manager_aafd0f77892bdd40752e536da6731e7c2}} 
+\index{TaskManager@{TaskManager}!GetProcesses@{GetProcesses}}
+\index{GetProcesses@{GetProcesses}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{GetProcesses()}{GetProcesses()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{Task\+Manager\+::\+ContainerT}} \& Task\+Manager\+::\+Get\+Processes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Helps to get all scanned processes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ContainerT\& with data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_task_manager_a6baac0015d027bc1ad0a7cfa9134d44e}\label{class_task_manager_a6baac0015d027bc1ad0a7cfa9134d44e}} 
+\index{TaskManager@{TaskManager}!GetProcesses@{GetProcesses}}
+\index{GetProcesses@{GetProcesses}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{GetProcesses()}{GetProcesses()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{Task\+Manager\+::\+ContainerT}} \& Task\+Manager\+::\+Get\+Processes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Helps to get all scanned processes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const ContainerT\& with data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_task_manager_aa2d57c600af6cb7cc8ea779581a26128}\label{class_task_manager_aa2d57c600af6cb7cc8ea779581a26128}} 
+\index{TaskManager@{TaskManager}!operator=@{operator=}}
+\index{operator=@{operator=}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_task_manager}{Task\+Manager}} \& Task\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_task_manager}{Task\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_task_manager_a47b3eb875f3aa797aa9b8e69531b76de}\label{class_task_manager_a47b3eb875f3aa797aa9b8e69531b76de}} 
+\index{TaskManager@{TaskManager}!operator=@{operator=}}
+\index{operator=@{operator=}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_task_manager}{Task\+Manager}} \& Task\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_task_manager}{Task\+Manager}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_task_manager_ae22ce618cca5baa8278e8b4935cffa33}\label{class_task_manager_ae22ce618cca5baa8278e8b4935cffa33}} 
+\index{TaskManager@{TaskManager}!Scan@{Scan}}
+\index{Scan@{Scan}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{Scan()}{Scan()}}
+{\footnotesize\ttfamily bool Task\+Manager\+::\+Scan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Helps to scan or rescan all processes in the Windows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool -\/ true if scan was successful; false -\/ if failed. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_task_manager_a83186e9b3a23b981a348405bff4daa4d}\label{class_task_manager_a83186e9b3a23b981a348405bff4daa4d}} 
+\index{TaskManager@{TaskManager}!Processes@{Processes}}
+\index{Processes@{Processes}!TaskManager@{TaskManager}}
+\doxysubsubsection{\texorpdfstring{Processes}{Processes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{ContainerT}} Task\+Manager\+::\+Processes\hspace{0.3cm}{\ttfamily [private]}}
+

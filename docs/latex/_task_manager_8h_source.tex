@@ -1,0 +1,41 @@
+\hypertarget{_task_manager_8h_source}{}\doxysection{Task\+Manager.\+h}
+\label{_task_manager_8h_source}\index{libs/windows-\/task-\/manager/headers/TaskManager.h@{libs/windows-\/task-\/manager/headers/TaskManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}RawProcess.h"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_task_manager}{TaskManager}} final}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \textcolor{keyword}{using }\mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{ContainerT}} = std::unordered\_map<DWORD, RawProcess>;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \mbox{\hyperlink{class_task_manager_ab1adaa0f5b87d8fb26c09e7883fdd9fe}{TaskManager}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_task_manager_a0808832384678dec6c7832899cb9c72d}{\string~TaskManager}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_task_manager_aa507b7c7c7022cb35f6923b34d72e479}{TaskManager}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_task_manager}{TaskManager}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_task_manager}{TaskManager}}\& \mbox{\hyperlink{class_task_manager_aa2d57c600af6cb7cc8ea779581a26128}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_task_manager}{TaskManager}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_task_manager_ae0eb341aea4d994c72e4267bb78d8658}{TaskManager}}(\mbox{\hyperlink{class_task_manager}{TaskManager}}\&\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_task_manager}{TaskManager}}\& \mbox{\hyperlink{class_task_manager_a47b3eb875f3aa797aa9b8e69531b76de}{operator=}}(\mbox{\hyperlink{class_task_manager}{TaskManager}}\&\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_task_manager_ae22ce618cca5baa8278e8b4935cffa33}{Scan}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{35     \mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{ContainerT}}\& \mbox{\hyperlink{class_task_manager_aafd0f77892bdd40752e536da6731e7c2}{GetProcesses}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{42     \textcolor{keyword}{const} \mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{ContainerT}}\& \mbox{\hyperlink{class_task_manager_aafd0f77892bdd40752e536da6731e7c2}{GetProcesses}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{49     std::vector<RawProcess::Statistics> \mbox{\hyperlink{class_task_manager_a837605ffc01f898cb618a2511b37ef0b}{ExtrudeStatisticsFromProcesses}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     ContainerT::iterator \mbox{\hyperlink{class_task_manager_a2c790a7fef3fddbf3fd70a7f29b5d1c2}{begin}}();}
+\DoxyCodeLine{52     ContainerT::const\_iterator \mbox{\hyperlink{class_task_manager_a2c790a7fef3fddbf3fd70a7f29b5d1c2}{begin}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{53     ContainerT::iterator \mbox{\hyperlink{class_task_manager_af617028497330f47719e7d4a60cf78d3}{end}}();}
+\DoxyCodeLine{54     ContainerT::const\_iterator \mbox{\hyperlink{class_task_manager_af617028497330f47719e7d4a60cf78d3}{end}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keyword}{private}:}
+\DoxyCodeLine{57     \mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{ContainerT}} \mbox{\hyperlink{class_task_manager_a83186e9b3a23b981a348405bff4daa4d}{Processes}};}
+\DoxyCodeLine{58 \};}
+
+\end{DoxyCode}

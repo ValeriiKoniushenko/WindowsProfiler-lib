@@ -25,7 +25,7 @@ bool TaskManager::Scan()
 				continue;
 			}
 
-			Processes.emplace_back(std::move(Process));
+			Processes.emplace(pe32.th32ProcessID, std::move(Process));
 		}
 	}
 
@@ -34,22 +34,44 @@ bool TaskManager::Scan()
 	return true;
 }
 
-std::vector<RawProcess>::iterator TaskManager::begin()
+TaskManager::ContainerT::iterator TaskManager::begin()
 {
 	return Processes.begin();
 }
 
-std::vector<RawProcess>::const_iterator TaskManager::begin() const
+TaskManager::ContainerT::const_iterator TaskManager::begin() const
 {
 	return Processes.cbegin();
 }
 
-std::vector<RawProcess>::iterator TaskManager::end()
+TaskManager::ContainerT::iterator TaskManager::end()
 {
 	return Processes.end();
 }
 
-std::vector<RawProcess>::const_iterator TaskManager::end() const
+TaskManager::ContainerT::const_iterator TaskManager::end() const
 {
 	return Processes.cend();
+}
+
+TaskManager::ContainerT& TaskManager::GetProcesses()
+{
+	return Processes;
+}
+
+const TaskManager::ContainerT& TaskManager::GetProcesses() const
+{
+	return Processes;
+}
+
+std::vector<RawProcess::Statistics> TaskManager::ExtrudeStatisticsFromProcesses() const
+{
+	std::vector<RawProcess::Statistics> Data;
+
+	for (auto& Process : Processes)
+	{
+		Data.emplace_back(Process.second.GetStatistics());
+	}
+
+	return Data;
 }

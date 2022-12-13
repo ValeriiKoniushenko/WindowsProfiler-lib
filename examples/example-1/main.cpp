@@ -7,11 +7,9 @@ int main()
 	TaskManager Manager;
 	Manager.Scan();
 
-	for (auto& Process : Manager)
+	for (auto& Stat : Manager.ExtrudeStatisticsFromProcesses())
 	{
-		Process.Update();
-		auto RamUsage = Utils::b2Fit(Process.GetStatistics().RAMUsage);
-		std::cout << RamUsage.first << " " << Utils::Uits2String(RamUsage.second) << std::endl;
+		std::cout << Stat << std::endl;
 	}
 
 	return 0;

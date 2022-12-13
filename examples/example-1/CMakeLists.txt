@@ -6,5 +6,3 @@ target_link_libraries(
 	WindowsTaskManager
 )
 
-target_compile_features(Example1 PRIVATE cxx_std_17)
-

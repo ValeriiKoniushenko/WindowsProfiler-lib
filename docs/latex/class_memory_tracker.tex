@@ -1,0 +1,127 @@
+\hypertarget{class_memory_tracker}{}\doxysection{Memory\+Tracker Class Reference}
+\label{class_memory_tracker}\index{MemoryTracker@{MemoryTracker}}
+
+
+{\ttfamily \#include $<$Memory\+Tracker.\+h$>$}
+
+Inheritance diagram for Memory\+Tracker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_memory_tracker}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_memory_tracker_a4cda72a1950c4a62f384f004f1e09668}{Memory\+Tracker}} (HANDLE \&\mbox{\hyperlink{class_memory_tracker_ad48bfc040d9e061cd078f95a5d6848d1}{Handle}})
+\item 
+\mbox{\hyperlink{class_memory_tracker_a478d4039d4f9b6b1d126c230a89a7a77}{$\sim$\+Memory\+Tracker}} () override
+\item 
+\mbox{\hyperlink{class_memory_tracker_a0fb34471767b4e93b611a801a97b6a40}{Memory\+Tracker}} (const \mbox{\hyperlink{class_memory_tracker}{Memory\+Tracker}} \&)=default
+\item 
+\mbox{\hyperlink{class_memory_tracker}{Memory\+Tracker}} \& \mbox{\hyperlink{class_memory_tracker_a4a7c0d21d8794898aa879b852a9c91f2}{operator=}} (const \mbox{\hyperlink{class_memory_tracker}{Memory\+Tracker}} \&)=default
+\item 
+\mbox{\hyperlink{class_memory_tracker_a01c7dc3c1d2c1e8581849188ab60fee5}{Memory\+Tracker}} (\mbox{\hyperlink{class_memory_tracker}{Memory\+Tracker}} \&\&)=default
+\item 
+\mbox{\hyperlink{class_memory_tracker}{Memory\+Tracker}} \& \mbox{\hyperlink{class_memory_tracker_af8d12ffeb34c0275b6f8d81e2e945e83}{operator=}} (\mbox{\hyperlink{class_memory_tracker}{Memory\+Tracker}} \&\&)=default
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_memory_tracker_a62876cfcc49185e1e460393acb91bf06}{RAMUsage}} () const
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_memory_tracker_aab8d692b8045fd4bc6cc0995d6285024}{Virtual\+Memory\+Usage}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_memory_tracker_a7999595fdf46a1146a85b23fe8ba10ca}{Clear\+Data}} () override
+\begin{DoxyCompactList}\small\item\em Try to clear data for overloaded operator= and for copy\textbackslash{}move constructs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+HANDLE $\ast$ \mbox{\hyperlink{class_memory_tracker_ad48bfc040d9e061cd078f95a5d6848d1}{Handle}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_memory_tracker_a4cda72a1950c4a62f384f004f1e09668}\label{class_memory_tracker_a4cda72a1950c4a62f384f004f1e09668}} 
+\index{MemoryTracker@{MemoryTracker}!MemoryTracker@{MemoryTracker}}
+\index{MemoryTracker@{MemoryTracker}!MemoryTracker@{MemoryTracker}}
+\doxysubsubsection{\texorpdfstring{MemoryTracker()}{MemoryTracker()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Memory\+Tracker\+::\+Memory\+Tracker (\begin{DoxyParamCaption}\item[{HANDLE \&}]{Handle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_memory_tracker_a478d4039d4f9b6b1d126c230a89a7a77}\label{class_memory_tracker_a478d4039d4f9b6b1d126c230a89a7a77}} 
+\index{MemoryTracker@{MemoryTracker}!````~MemoryTracker@{$\sim$MemoryTracker}}
+\index{````~MemoryTracker@{$\sim$MemoryTracker}!MemoryTracker@{MemoryTracker}}
+\doxysubsubsection{\texorpdfstring{$\sim$MemoryTracker()}{~MemoryTracker()}}
+{\footnotesize\ttfamily Memory\+Tracker\+::$\sim$\+Memory\+Tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{class_memory_tracker_a0fb34471767b4e93b611a801a97b6a40}\label{class_memory_tracker_a0fb34471767b4e93b611a801a97b6a40}} 
+\index{MemoryTracker@{MemoryTracker}!MemoryTracker@{MemoryTracker}}
+\index{MemoryTracker@{MemoryTracker}!MemoryTracker@{MemoryTracker}}
+\doxysubsubsection{\texorpdfstring{MemoryTracker()}{MemoryTracker()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Memory\+Tracker\+::\+Memory\+Tracker (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_memory_tracker}{Memory\+Tracker}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_memory_tracker_a01c7dc3c1d2c1e8581849188ab60fee5}\label{class_memory_tracker_a01c7dc3c1d2c1e8581849188ab60fee5}} 
+\index{MemoryTracker@{MemoryTracker}!MemoryTracker@{MemoryTracker}}
+\index{MemoryTracker@{MemoryTracker}!MemoryTracker@{MemoryTracker}}
+\doxysubsubsection{\texorpdfstring{MemoryTracker()}{MemoryTracker()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Memory\+Tracker\+::\+Memory\+Tracker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_memory_tracker}{Memory\+Tracker}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_memory_tracker_a7999595fdf46a1146a85b23fe8ba10ca}\label{class_memory_tracker_a7999595fdf46a1146a85b23fe8ba10ca}} 
+\index{MemoryTracker@{MemoryTracker}!ClearData@{ClearData}}
+\index{ClearData@{ClearData}!MemoryTracker@{MemoryTracker}}
+\doxysubsubsection{\texorpdfstring{ClearData()}{ClearData()}}
+{\footnotesize\ttfamily void Memory\+Tracker\+::\+Clear\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Try to clear data for overloaded operator= and for copy\textbackslash{}move constructs. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_object_a5547296d5a96fe5f8cef430d65d4d688}{Object}}.
+
+\mbox{\Hypertarget{class_memory_tracker_a4a7c0d21d8794898aa879b852a9c91f2}\label{class_memory_tracker_a4a7c0d21d8794898aa879b852a9c91f2}} 
+\index{MemoryTracker@{MemoryTracker}!operator=@{operator=}}
+\index{operator=@{operator=}!MemoryTracker@{MemoryTracker}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_memory_tracker}{Memory\+Tracker}} \& Memory\+Tracker\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_memory_tracker}{Memory\+Tracker}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_memory_tracker_af8d12ffeb34c0275b6f8d81e2e945e83}\label{class_memory_tracker_af8d12ffeb34c0275b6f8d81e2e945e83}} 
+\index{MemoryTracker@{MemoryTracker}!operator=@{operator=}}
+\index{operator=@{operator=}!MemoryTracker@{MemoryTracker}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_memory_tracker}{Memory\+Tracker}} \& Memory\+Tracker\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_memory_tracker}{Memory\+Tracker}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_memory_tracker_a62876cfcc49185e1e460393acb91bf06}\label{class_memory_tracker_a62876cfcc49185e1e460393acb91bf06}} 
+\index{MemoryTracker@{MemoryTracker}!RAMUsage@{RAMUsage}}
+\index{RAMUsage@{RAMUsage}!MemoryTracker@{MemoryTracker}}
+\doxysubsubsection{\texorpdfstring{RAMUsage()}{RAMUsage()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Memory\+Tracker\+::\+RAMUsage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_memory_tracker_aab8d692b8045fd4bc6cc0995d6285024}\label{class_memory_tracker_aab8d692b8045fd4bc6cc0995d6285024}} 
+\index{MemoryTracker@{MemoryTracker}!VirtualMemoryUsage@{VirtualMemoryUsage}}
+\index{VirtualMemoryUsage@{VirtualMemoryUsage}!MemoryTracker@{MemoryTracker}}
+\doxysubsubsection{\texorpdfstring{VirtualMemoryUsage()}{VirtualMemoryUsage()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Memory\+Tracker\+::\+Virtual\+Memory\+Usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_memory_tracker_ad48bfc040d9e061cd078f95a5d6848d1}\label{class_memory_tracker_ad48bfc040d9e061cd078f95a5d6848d1}} 
+\index{MemoryTracker@{MemoryTracker}!Handle@{Handle}}
+\index{Handle@{Handle}!MemoryTracker@{MemoryTracker}}
+\doxysubsubsection{\texorpdfstring{Handle}{Handle}}
+{\footnotesize\ttfamily HANDLE$\ast$ Memory\+Tracker\+::\+Handle \{\}\hspace{0.3cm}{\ttfamily [private]}}
+

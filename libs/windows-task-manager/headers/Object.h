@@ -9,6 +9,11 @@ public:
 	Object(Object&&) = default;
 	Object& operator=(Object&&) = default;
 
+	/**
+	 * @brief Try to clear data for overloaded operator= and for copy\move constructs
+	 * @return void
+	 * @param void
+	 */
 	virtual void ClearData() = 0;
 
 protected:

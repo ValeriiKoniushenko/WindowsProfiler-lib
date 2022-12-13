@@ -1,0 +1,66 @@
+\hypertarget{_raw_process_8h_source}{}\doxysection{Raw\+Process.\+h}
+\label{_raw_process_8h_source}\index{libs/windows-\/task-\/manager/headers/RawProcess.h@{libs/windows-\/task-\/manager/headers/RawProcess.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}CPUTracker.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}MemoryTracker.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Object.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <ostream>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_raw_process}{RawProcess}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_object}{Object}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_raw_process_1_1_statistics}{Statistics}}}
+\DoxyCodeLine{14     \{}
+\DoxyCodeLine{15         std::string \mbox{\hyperlink{struct_raw_process_1_1_statistics_a03f50734824b860869d5180814e39412}{Name}};}
+\DoxyCodeLine{16         \textcolor{keywordtype}{double} \mbox{\hyperlink{struct_raw_process_1_1_statistics_a0a76319838e2715ad44395519e38da36}{CPUUsage}}\{\};}
+\DoxyCodeLine{17         DWORD \mbox{\hyperlink{struct_raw_process_1_1_statistics_a0f3d6a2d96a43797874c9c46eb039f5b}{PID}}\{\};}
+\DoxyCodeLine{18         std::size\_t \mbox{\hyperlink{struct_raw_process_1_1_statistics_a1ad53abfc9f77dba6c188cbacdc9da4a}{RAMUsage}}\{\};}
+\DoxyCodeLine{19         std::size\_t \mbox{\hyperlink{struct_raw_process_1_1_statistics_a324f6fe779276011801daf1084aa0690}{VirtualMemoryUsage}}\{\};}
+\DoxyCodeLine{20         std::string \mbox{\hyperlink{struct_raw_process_1_1_statistics_ab36fa74cbd162884367a2975878a6612}{PathToProcess}};}
+\DoxyCodeLine{21     \};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{27     \mbox{\hyperlink{class_raw_process_a9c805bafe36fb5d23017f39f406aea6e}{RawProcess}}();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{33     \mbox{\hyperlink{class_raw_process_a9c805bafe36fb5d23017f39f406aea6e}{RawProcess}}(DWORD Pid);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{39     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_raw_process_a702bb976b6bd9d6bfd5a2a1961351d32}{\string~RawProcess}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{45     \mbox{\hyperlink{class_raw_process_a152d7604352f3ceb9d3f9498f35c4f81}{RawProcess}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_raw_process}{RawProcess}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{51     \mbox{\hyperlink{class_raw_process}{RawProcess}}\& \mbox{\hyperlink{class_raw_process_a5508ff1886d3581b3916061125321d8e}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_raw_process}{RawProcess}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{57     \mbox{\hyperlink{class_raw_process_a9c805bafe36fb5d23017f39f406aea6e}{RawProcess}}(\mbox{\hyperlink{class_raw_process}{RawProcess}}\&\&);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{63     \mbox{\hyperlink{class_raw_process}{RawProcess}}\& \mbox{\hyperlink{class_raw_process_a5508ff1886d3581b3916061125321d8e}{operator=}}(\mbox{\hyperlink{class_raw_process}{RawProcess}}\&\&);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{70     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_raw_process_a89dd51c7fc2f5548671cf8c39de05e91}{Open}}(DWORD PID);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_raw_process_a211f2743599527b7714c171a586262f3}{Close}}();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_raw_process_ab76083ddb2c9c24feab050af95885530}{IsOpened}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{91     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_raw_process_a05f790b769483d136c8234fb25c6e42f}{Update}}();}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{98     HANDLE \mbox{\hyperlink{class_raw_process_a724cdc3c983e05063be0b18b9fdf6259}{Data}}();}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{105     \mbox{\hyperlink{struct_raw_process_1_1_statistics}{Statistics}} \mbox{\hyperlink{class_raw_process_ac9d85d9a5b3c9f1da49bf61feccead18}{GetStatistics}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{keyword}{private}:}
+\DoxyCodeLine{108     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_raw_process_a6700b4208a0a731e261c1b5bb5524e36}{ClearData}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{109     std::string \mbox{\hyperlink{class_raw_process_a5e68e9d2fd34ff23e9374ad2a9216403}{ProcessIdToProcessPath}}(DWORD processId);}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 \textcolor{keyword}{private}:}
+\DoxyCodeLine{112     HANDLE \mbox{\hyperlink{class_raw_process_a35ba9d835708c177e17232fbfd07200f}{Handle}}\{\};}
+\DoxyCodeLine{113     \mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}} \mbox{\hyperlink{class_raw_process_ad044a2a38fcde8b6c8d8b7a8f2f7b4a0}{CPUTracker\_}};}
+\DoxyCodeLine{114     \mbox{\hyperlink{class_memory_tracker}{MemoryTracker}} \mbox{\hyperlink{class_raw_process_a5f2eb63ae2a15804615b782258cdb515}{MemoryTracker\_}};}
+\DoxyCodeLine{115     \mbox{\hyperlink{struct_raw_process_1_1_statistics}{Statistics}} \mbox{\hyperlink{class_raw_process_ad70d0ac53d9dd6dd0a3199734744d62e}{Statistics\_}};}
+\DoxyCodeLine{116 \};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 std::ostream\& operator<<(std::ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{struct_raw_process_1_1_statistics}{RawProcess::Statistics}}\& Stat);}
+
+\end{DoxyCode}

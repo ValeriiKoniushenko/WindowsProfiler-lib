@@ -4,3 +4,8 @@ project(WindowsProcessManager)
 
 add_subdirectory(libs/windows-task-manager)
 add_subdirectory(examples)
+
+add_custom_target(
+        doc ALL
+        COMMAND doxygen ../Doxyfile
+)

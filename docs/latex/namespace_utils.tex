@@ -1,0 +1,175 @@
+\hypertarget{namespace_utils}{}\doxysection{Utils Namespace Reference}
+\label{namespace_utils}\index{Utils@{Utils}}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit}} \{ \newline
+\mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edeca92eb5ffee6ae2fec3ad71c777531578f}{b}}
+, \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edecaba34ea40525a4379add785228e37fe86}{kb}}
+, \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edeca6dd757cbdd852a16f222a7d1a07eab3e}{Mb}}
+, \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edeca1c717215e36a6768f37353c8f554a7d8}{Gb}}
+, \newline
+\mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edecabd63cda5e59ddb168ec03847f26b831b}{Tb}}
+ \}
+\begin{DoxyCompactList}\small\item\em Describes a unit system for data storing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespace_utils_a3ef1777d4ea4fb42df165ab306868d39}{Uits2\+String}} (\mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit}} U)
+\begin{DoxyCompactList}\small\item\em Helps to convert a \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit(enum class)}} to a string. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespace_utils_a074931515522dbaadc4094a014d1cebe}{b2kb}} (std\+::size\+\_\+t Bytes)
+\begin{DoxyCompactList}\small\item\em Helps to convert a bytes to kbs. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespace_utils_a5a938350859b8b6194bdfc47e5324306}{b2\+Mb}} (std\+::size\+\_\+t Bytes)
+\begin{DoxyCompactList}\small\item\em Helps to convert a bytes to Mbs. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespace_utils_a1e7951607d67e4c2a1ebce31a2403586}{b2\+Gb}} (std\+::size\+\_\+t Bytes)
+\begin{DoxyCompactList}\small\item\em Helps to convert a bytes to Gbs. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespace_utils_ad4a2c433ae704a507fe0b5a91857822f}{b2\+Tb}} (std\+::size\+\_\+t Bytes)
+\begin{DoxyCompactList}\small\item\em Helps to convert a bytes to Tbs. \end{DoxyCompactList}\item 
+std\+::pair$<$ double, \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit}} $>$ \mbox{\hyperlink{namespace_utils_a6163616b95ae079814438f1f161bd957}{b2\+Fit}} (std\+::size\+\_\+t Bytes)
+\begin{DoxyCompactList}\small\item\em Helps to convert a set of bytes to the fitting format. 1123byte -\/\texorpdfstring{$>$}{>} 1.\+123kb, 2356124 -\/\texorpdfstring{$>$}{>} 2.\+356124\+Mb. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}\label{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}} 
+\index{Utils@{Utils}!Unit@{Unit}}
+\index{Unit@{Unit}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{Unit}{Unit}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Utils\+::\+Unit}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Describes a unit system for data storing. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{b@{b}!Utils@{Utils}}\index{Utils@{Utils}!b@{b}}}\mbox{\Hypertarget{namespace_utils_a1a8c1f8b95df0aff9510225425d2edeca92eb5ffee6ae2fec3ad71c777531578f}\label{namespace_utils_a1a8c1f8b95df0aff9510225425d2edeca92eb5ffee6ae2fec3ad71c777531578f}} 
+b&Bytes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kb@{kb}!Utils@{Utils}}\index{Utils@{Utils}!kb@{kb}}}\mbox{\Hypertarget{namespace_utils_a1a8c1f8b95df0aff9510225425d2edecaba34ea40525a4379add785228e37fe86}\label{namespace_utils_a1a8c1f8b95df0aff9510225425d2edecaba34ea40525a4379add785228e37fe86}} 
+kb&Kilo Bytes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mb@{Mb}!Utils@{Utils}}\index{Utils@{Utils}!Mb@{Mb}}}\mbox{\Hypertarget{namespace_utils_a1a8c1f8b95df0aff9510225425d2edeca6dd757cbdd852a16f222a7d1a07eab3e}\label{namespace_utils_a1a8c1f8b95df0aff9510225425d2edeca6dd757cbdd852a16f222a7d1a07eab3e}} 
+Mb&Mega Bytes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Gb@{Gb}!Utils@{Utils}}\index{Utils@{Utils}!Gb@{Gb}}}\mbox{\Hypertarget{namespace_utils_a1a8c1f8b95df0aff9510225425d2edeca1c717215e36a6768f37353c8f554a7d8}\label{namespace_utils_a1a8c1f8b95df0aff9510225425d2edeca1c717215e36a6768f37353c8f554a7d8}} 
+Gb&Giga Bytes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tb@{Tb}!Utils@{Utils}}\index{Utils@{Utils}!Tb@{Tb}}}\mbox{\Hypertarget{namespace_utils_a1a8c1f8b95df0aff9510225425d2edecabd63cda5e59ddb168ec03847f26b831b}\label{namespace_utils_a1a8c1f8b95df0aff9510225425d2edecabd63cda5e59ddb168ec03847f26b831b}} 
+Tb&Terra Bytes \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_utils_a6163616b95ae079814438f1f161bd957}\label{namespace_utils_a6163616b95ae079814438f1f161bd957}} 
+\index{Utils@{Utils}!b2Fit@{b2Fit}}
+\index{b2Fit@{b2Fit}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{b2Fit()}{b2Fit()}}
+{\footnotesize\ttfamily std\+::pair$<$ double, \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit}} $>$ Utils\+::b2\+Fit (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{Bytes }\end{DoxyParamCaption})}
+
+
+
+Helps to convert a set of bytes to the fitting format. 1123byte -\/\texorpdfstring{$>$}{>} 1.\+123kb, 2356124 -\/\texorpdfstring{$>$}{>} 2.\+356124\+Mb. 
+
+\begin{DoxyReturn}{Returns}
+std\+::pair$<$double, Unit$>$ 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::size\+\_\+t} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_utils_a1e7951607d67e4c2a1ebce31a2403586}\label{namespace_utils_a1e7951607d67e4c2a1ebce31a2403586}} 
+\index{Utils@{Utils}!b2Gb@{b2Gb}}
+\index{b2Gb@{b2Gb}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{b2Gb()}{b2Gb()}}
+{\footnotesize\ttfamily double Utils\+::b2\+Gb (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{Bytes }\end{DoxyParamCaption})}
+
+
+
+Helps to convert a bytes to Gbs. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ count of Gb 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::size\+\_\+t} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_utils_a074931515522dbaadc4094a014d1cebe}\label{namespace_utils_a074931515522dbaadc4094a014d1cebe}} 
+\index{Utils@{Utils}!b2kb@{b2kb}}
+\index{b2kb@{b2kb}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{b2kb()}{b2kb()}}
+{\footnotesize\ttfamily double Utils\+::b2kb (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{Bytes }\end{DoxyParamCaption})}
+
+
+
+Helps to convert a bytes to kbs. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ count of kb 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_utils_a5a938350859b8b6194bdfc47e5324306}\label{namespace_utils_a5a938350859b8b6194bdfc47e5324306}} 
+\index{Utils@{Utils}!b2Mb@{b2Mb}}
+\index{b2Mb@{b2Mb}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{b2Mb()}{b2Mb()}}
+{\footnotesize\ttfamily double Utils\+::b2\+Mb (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{Bytes }\end{DoxyParamCaption})}
+
+
+
+Helps to convert a bytes to Mbs. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ count of Mb 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::size\+\_\+t} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_utils_ad4a2c433ae704a507fe0b5a91857822f}\label{namespace_utils_ad4a2c433ae704a507fe0b5a91857822f}} 
+\index{Utils@{Utils}!b2Tb@{b2Tb}}
+\index{b2Tb@{b2Tb}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{b2Tb()}{b2Tb()}}
+{\footnotesize\ttfamily double Utils\+::b2\+Tb (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{Bytes }\end{DoxyParamCaption})}
+
+
+
+Helps to convert a bytes to Tbs. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ count of Tb 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::size\+\_\+t} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_utils_a3ef1777d4ea4fb42df165ab306868d39}\label{namespace_utils_a3ef1777d4ea4fb42df165ab306868d39}} 
+\index{Utils@{Utils}!Uits2String@{Uits2String}}
+\index{Uits2String@{Uits2String}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{Uits2String()}{Uits2String()}}
+{\footnotesize\ttfamily std\+::string Utils\+::\+Uits2\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit}}}]{U }\end{DoxyParamCaption})}
+
+
+
+Helps to convert a \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit(enum class)}} to a string. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string -\/ unit in the string format 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em Unit} & \\
+\hline
+\end{DoxyParams}

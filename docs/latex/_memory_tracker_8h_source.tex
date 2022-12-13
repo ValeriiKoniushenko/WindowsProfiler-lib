@@ -1,0 +1,31 @@
+\hypertarget{_memory_tracker_8h_source}{}\doxysection{Memory\+Tracker.\+h}
+\label{_memory_tracker_8h_source}\index{libs/windows-\/task-\/manager/headers/MemoryTracker.h@{libs/windows-\/task-\/manager/headers/MemoryTracker.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Object.h"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <Windows.h>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_memory_tracker}{MemoryTracker}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_object}{Object}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_memory_tracker}{MemoryTracker}}(HANDLE\& \mbox{\hyperlink{class_memory_tracker_ad48bfc040d9e061cd078f95a5d6848d1}{Handle}});}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_memory_tracker_a478d4039d4f9b6b1d126c230a89a7a77}{\string~MemoryTracker}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_memory_tracker_a0fb34471767b4e93b611a801a97b6a40}{MemoryTracker}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_memory_tracker}{MemoryTracker}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_memory_tracker}{MemoryTracker}}\& \mbox{\hyperlink{class_memory_tracker_a4a7c0d21d8794898aa879b852a9c91f2}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_memory_tracker}{MemoryTracker}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_memory_tracker_a01c7dc3c1d2c1e8581849188ab60fee5}{MemoryTracker}}(\mbox{\hyperlink{class_memory_tracker}{MemoryTracker}}\&\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_memory_tracker}{MemoryTracker}}\& \mbox{\hyperlink{class_memory_tracker_af8d12ffeb34c0275b6f8d81e2e945e83}{operator=}}(\mbox{\hyperlink{class_memory_tracker}{MemoryTracker}}\&\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     std::size\_t \mbox{\hyperlink{class_memory_tracker_a62876cfcc49185e1e460393acb91bf06}{RAMUsage}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{18     std::size\_t \mbox{\hyperlink{class_memory_tracker_aab8d692b8045fd4bc6cc0995d6285024}{VirtualMemoryUsage}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_memory_tracker_a7999595fdf46a1146a85b23fe8ba10ca}{ClearData}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24     HANDLE* \mbox{\hyperlink{class_memory_tracker_ad48bfc040d9e061cd078f95a5d6848d1}{Handle}}\{\};}
+\DoxyCodeLine{25 \};}
+
+\end{DoxyCode}

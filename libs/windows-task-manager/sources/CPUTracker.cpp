@@ -1,18 +1,17 @@
 #include "CPUTracker.h"
 
-#include <thread>
 #include <cmath>
+#include <thread>
 
 namespace
 {
-	void Assign(ULARGE_INTEGER& Left, FILETIME& Right)
-	{
-		memcpy(&Left, &Right, sizeof(FILETIME));
-	}
-} // namespace
+void Assign(ULARGE_INTEGER& Left, FILETIME& Right)
+{
+	memcpy(&Left, &Right, sizeof(FILETIME));
+}
+}	 // namespace
 
-CPUTracker::CPUTracker(HANDLE& Handle) :
-	Handle(&Handle)
+CPUTracker::CPUTracker(HANDLE& Handle) : Handle(&Handle)
 {
 }
 
@@ -47,8 +46,7 @@ double CPUTracker::GetCpuUsage()
 	GetProcessTimes(*Handle, &FTime, &FTime, &FSys, &FUser);
 	Assign(Sys, FSys);
 	Assign(User, FUser);
-	double percent = (Sys.QuadPart - LastSysCPU.QuadPart) +
-					 (User.QuadPart - LastUserCPU.QuadPart);
+	double percent = (Sys.QuadPart - LastSysCPU.QuadPart) + (User.QuadPart - LastUserCPU.QuadPart);
 	percent /= (Now.QuadPart - LastCPU.QuadPart);
 	percent /= std::thread::hardware_concurrency();
 	LastCPU = Now;
@@ -56,7 +54,9 @@ double CPUTracker::GetCpuUsage()
 	LastSysCPU = Sys;
 
 	if (std::isnan(percent) || std::isinf(percent))
+	{
 		percent = 0.;
+	}
 
 	return percent * 100.;
 }
@@ -64,4 +64,11 @@ double CPUTracker::GetCpuUsage()
 CPUTracker::~CPUTracker()
 {
 	ClearData();
+}
+
+std::string CPUTracker::GetPriority() const
+{
+	auto PriorityClass = GetPriorityClass(*Handle);
+
+	return std::string();
 }

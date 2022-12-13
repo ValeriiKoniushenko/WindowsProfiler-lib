@@ -18,4 +18,5 @@ add_library(
 target_include_directories(
 	WindowsTaskManager PUBLIC
 	headers/
+	D:/LibsUtils/boost_1_80_0
 )

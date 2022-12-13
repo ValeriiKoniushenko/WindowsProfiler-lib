@@ -1,28 +1,24 @@
 #include "RawProcess.h"
 
+#include "boost/format.hpp"
+
+#include <cmath>
 #include <memory>
 #include <thread>
-#include <cmath>
+#include <filesystem>
 
-RawProcess::RawProcess(RawProcess&& Other) :
-	CPUTracker_(Handle),
-	MemoryTracker_(Handle)
+RawProcess::RawProcess(RawProcess&& Other) : CPUTracker_(Handle), MemoryTracker_(Handle)
 {
 	*this = std::move(Other);
 }
 
-RawProcess::RawProcess(DWORD Pid) :
-	CPUTracker_(Handle),
-	MemoryTracker_(Handle)
+RawProcess::RawProcess(DWORD Pid) : CPUTracker_(Handle), MemoryTracker_(Handle)
 {
 	Open(Pid);
 }
 
-RawProcess::RawProcess() :
-	CPUTracker_(Handle),
-	MemoryTracker_(Handle)
+RawProcess::RawProcess() : CPUTracker_(Handle), MemoryTracker_(Handle)
 {
-
 }
 
 void RawProcess::Close()
@@ -63,12 +59,15 @@ bool RawProcess::Open(DWORD PID)
 
 	Handle = OpenProcess(PROCESS_ALL_ACCESS, TRUE, PID);
 	if (!IsOpened())
+	{
 		return false;
+	}
 
 	CPUTracker_.InitCPUTracker();
 
 	Statistics_.PID = PID;
-	Statistics_.Name = ProcessIdToName(PID);
+	Statistics_.PathToProcess = ProcessIdToProcessPath(PID);
+	Statistics_.Name = std::filesystem::path(ProcessIdToProcessPath(PID)).stem().string();
 
 	return true;
 }
@@ -77,8 +76,6 @@ HANDLE RawProcess::Data()
 {
 	return Handle;
 }
-
-
 
 RawProcess::~RawProcess()
 {
@@ -100,13 +97,11 @@ void RawProcess::ClearData()
 	CPUTracker_.ClearData();
 }
 
-std::string RawProcess::ProcessIdToName(DWORD processId)
+std::string RawProcess::ProcessIdToProcessPath(DWORD processId)
 {
 	std::string ret;
 	HANDLE handle = OpenProcess(
-		PROCESS_QUERY_LIMITED_INFORMATION,
-		FALSE,
-		processId /* This is the PID, you can find one from windows task manager */
+		PROCESS_QUERY_LIMITED_INFORMATION, FALSE, processId /* This is the PID, you can find one from windows task manager */
 	);
 	if (handle)
 	{
@@ -118,13 +113,20 @@ std::string RawProcess::ProcessIdToName(DWORD processId)
 		}
 		else
 		{
-			printf("Error GetModuleBaseNameA : %lu", GetLastError());
+			return "None";
 		}
 		CloseHandle(handle);
 	}
 	else
 	{
-		printf("Error OpenProcess : %lu", GetLastError());
+		return "None";
 	}
 	return ret;
+}
+
+std::ostream& operator<<(std::ostream& out, const RawProcess::Statistics& Stat)
+{
+	out << boost::format("{ PID: %1%, Name: %2%, CPU Usage: %3%, RAM Usage: %4%, Virtual Memory Usage: %5%, Path: %6% }") %
+			   Stat.PID % Stat.Name % Stat.CPUUsage % Stat.RAMUsage % Stat.VirtualMemoryUsage % Stat.PathToProcess;
+	return out;
 }
