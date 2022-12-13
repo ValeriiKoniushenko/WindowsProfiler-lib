@@ -3,6 +3,7 @@
 #include "Object.h"
 
 #include <Windows.h>
+#include <cstdlib>
 
 /**
  * @brief Allows to track Memory data

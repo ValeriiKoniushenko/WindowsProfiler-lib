@@ -16,7 +16,7 @@ bool TaskManager::Scan()
 
 	pe32.dwSize = sizeof(PROCESSENTRY32);
 	if (Process32First(hProcessSnap, &pe32))
-	{	 // Gets first running process
+	{
 		while (Process32Next(hProcessSnap, &pe32))
 		{
 			RawProcess Process(pe32.th32ProcessID);
@@ -25,7 +25,15 @@ bool TaskManager::Scan()
 				continue;
 			}
 
-			Processes.emplace(pe32.th32ProcessID, std::move(Process));
+			auto El = Processes.find(pe32.th32ProcessID);
+			if (El == Processes.end())
+			{
+				Processes.emplace(pe32.th32ProcessID, std::move(Process));
+			}
+			else
+			{
+				El->second.Update();
+			}
 		}
 	}
 

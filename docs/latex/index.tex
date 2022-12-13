@@ -6,10 +6,78 @@ Hello everyone! If you read this page, so you need one tool to get more control 
 
 \end{DoxyCodeInclude}
 .\hypertarget{index_autotoc_md2}{}\doxysection{Examples}\label{index_autotoc_md2}
-The first thing what you need is an object of the class Raw\+Proess. 
+More easier examples with details you can find in the folder \textquotesingle{}example\textquotesingle{}. But now I\textquotesingle{}ll try all abilities of this lib. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{ \{c++\}}
-\DoxyCodeLine{int i = 123;}
+\DoxyCodeLine{\#include "{}TaskManager.h"{}}
+\DoxyCodeLine{\#include "{}Utils.h"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#include <algorithm>}
+\DoxyCodeLine{\#include <iostream>}
+\DoxyCodeLine{\#include <iomanip>}
+\DoxyCodeLine{}
+\DoxyCodeLine{using std::cout;}
+\DoxyCodeLine{using std::endl;}
+\DoxyCodeLine{using std::setw;}
+\DoxyCodeLine{}
+\DoxyCodeLine{void printHeader()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    cout << "{}| "{};}
+\DoxyCodeLine{    cout << setw(2 + 5) << "{}PID |"{};}
+\DoxyCodeLine{    cout << setw(2 + 36) << "{}Name |"{};}
+\DoxyCodeLine{    cout << setw(2 + 5) << "{}CPU |"{};}
+\DoxyCodeLine{    cout << setw(3 + 13) << "{}RAM |"{};}
+\DoxyCodeLine{    cout << setw(3 + 13) << "{}VRAM |"{};}
+\DoxyCodeLine{    cout << endl;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{void printRow(const RawProcess::Statistics\& Stat)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    cout << "{}| "{};}
+\DoxyCodeLine{    cout << setw(5) << Stat.PID << "{} |"{};}
+\DoxyCodeLine{    cout << setw(36) << Stat.Name << "{} |"{};}
+\DoxyCodeLine{    cout << setw(5) << Stat.CPUUsage << "{} |"{};}
+\DoxyCodeLine{    auto RAM = Utils::b2Fit(Stat.RAMUsage);}
+\DoxyCodeLine{    cout << setw(10) << RAM.first << "{} "{} << setw(3) << Utils::Uits2String(RAM.second) << "{} |"{};}
+\DoxyCodeLine{    auto VRAM = Utils::b2Fit(Stat.VirtualMemoryUsage);}
+\DoxyCodeLine{    cout << setw(10) << VRAM.first << "{} "{} << setw(3) << Utils::Uits2String(VRAM.second) << "{} |"{};}
+\DoxyCodeLine{    cout << endl;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{int main()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    TaskManager Tasker;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    cout << std::setprecision(2);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    while(1)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        Sleep(1000);}
+\DoxyCodeLine{        Tasker.Scan();}
+\DoxyCodeLine{}
+\DoxyCodeLine{        auto Data = Tasker.ExtrudeStatisticsFromProcesses();}
+\DoxyCodeLine{        std::remove\_if(Data.begin(), Data.end(), [](auto\& a) \{ return a.CPUUsage == 0.; \});}
+\DoxyCodeLine{        std::sort(Data.begin(), Data.end(), [](auto\& a, auto\& b) \{ return a.PID < b.PID; \});}
+\DoxyCodeLine{        Data.resize(10);}
+\DoxyCodeLine{        for (auto\& Stat : Data)}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            printRow(Stat);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        // => |   960 |                          fsnotifier |    0 |       2.7  Mb |   5.4e+02  kb |}
+\DoxyCodeLine{        // => |  1056 |                         nvcontainer |    0 |        67  Mb |        46  Mb |}
+\DoxyCodeLine{        // => |  1088 |             StartMenuExperienceHost |    0 |        74  Mb |        24  Mb |}
+\DoxyCodeLine{        // => |  2092 |                       RuntimeBroker |    0 |        19  Mb |       3.8  Mb |}
+\DoxyCodeLine{        // => |  2328 |                       TextInputHost |    0 |        54  Mb |        35  Mb |}
+\DoxyCodeLine{        // => |  3100 |                             conhost |    0 |        17  Mb |       7.3  Mb |}
+\DoxyCodeLine{        // => |  3200 |                       GoogleDriveFS |    0 |        27  Mb |        13  Mb |}
+\DoxyCodeLine{        // => |  3624 |                       GoogleDriveFS |    0 |     1e+02  Mb |        54  Mb |}
+\DoxyCodeLine{        // => |  3828 |                        NVIDIA Share |    0 |        81  Mb |        55  Mb |}
+\DoxyCodeLine{        // => |  4028 |                      ProcessManager |  1.8 |        45  Mb |        37  Mb |}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    return 0;}
+\DoxyCodeLine{\}}
 
 \end{DoxyCode}
- 
+\hypertarget{index_autotoc_md3}{}\doxysection{Feedback \& Contacts}\label{index_autotoc_md3}
+You can send me e-\/mail\+: \href{mailto:Valerii.Koniushenko@gmail.com}{\texttt{ Valerii.\+Koniushenko@gmail.\+com}} or try to find me in telegram\+: @markmoran24 

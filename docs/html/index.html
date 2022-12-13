@@ -80,9 +80,79 @@ Intro</h1>
 <p >Hello everyone! If you read this page, so you need one tool to get more control over your system, and this one tool, I hope, this lib. Just download it or clone and connect to your project like opensource or just .lib</p><div class="fragment"></div><!-- fragment --><p>.</p>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Examples</h1>
-<p >The first thing what you need is an object of the class RawProess. </p><div class="fragment"><div class="line"> {c++}</div>
-<div class="line">int i = 123;</div>
-</div><!-- fragment --> </div></div><!-- PageDoc -->
+<p >More easier examples with details you can find in the folder 'example'. But now I'll try all abilities of this lib. </p><div class="fragment"><div class="line"> {c++}</div>
+<div class="line">#include &quot;TaskManager.h&quot;</div>
+<div class="line">#include &quot;Utils.h&quot;</div>
+<div class="line"> </div>
+<div class="line">#include &lt;algorithm&gt;</div>
+<div class="line">#include &lt;iostream&gt;</div>
+<div class="line">#include &lt;iomanip&gt;</div>
+<div class="line"> </div>
+<div class="line">using std::cout;</div>
+<div class="line">using std::endl;</div>
+<div class="line">using std::setw;</div>
+<div class="line"> </div>
+<div class="line">void printHeader()</div>
+<div class="line">{</div>
+<div class="line">    cout &lt;&lt; &quot;| &quot;;</div>
+<div class="line">    cout &lt;&lt; setw(2 + 5) &lt;&lt; &quot;PID |&quot;;</div>
+<div class="line">    cout &lt;&lt; setw(2 + 36) &lt;&lt; &quot;Name |&quot;;</div>
+<div class="line">    cout &lt;&lt; setw(2 + 5) &lt;&lt; &quot;CPU |&quot;;</div>
+<div class="line">    cout &lt;&lt; setw(3 + 13) &lt;&lt; &quot;RAM |&quot;;</div>
+<div class="line">    cout &lt;&lt; setw(3 + 13) &lt;&lt; &quot;VRAM |&quot;;</div>
+<div class="line">    cout &lt;&lt; endl;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void printRow(const RawProcess::Statistics&amp; Stat)</div>
+<div class="line">{</div>
+<div class="line">    cout &lt;&lt; &quot;| &quot;;</div>
+<div class="line">    cout &lt;&lt; setw(5) &lt;&lt; Stat.PID &lt;&lt; &quot; |&quot;;</div>
+<div class="line">    cout &lt;&lt; setw(36) &lt;&lt; Stat.Name &lt;&lt; &quot; |&quot;;</div>
+<div class="line">    cout &lt;&lt; setw(5) &lt;&lt; Stat.CPUUsage &lt;&lt; &quot; |&quot;;</div>
+<div class="line">    auto RAM = Utils::b2Fit(Stat.RAMUsage);</div>
+<div class="line">    cout &lt;&lt; setw(10) &lt;&lt; RAM.first &lt;&lt; &quot; &quot; &lt;&lt; setw(3) &lt;&lt; Utils::Uits2String(RAM.second) &lt;&lt; &quot; |&quot;;</div>
+<div class="line">    auto VRAM = Utils::b2Fit(Stat.VirtualMemoryUsage);</div>
+<div class="line">    cout &lt;&lt; setw(10) &lt;&lt; VRAM.first &lt;&lt; &quot; &quot; &lt;&lt; setw(3) &lt;&lt; Utils::Uits2String(VRAM.second) &lt;&lt; &quot; |&quot;;</div>
+<div class="line">    cout &lt;&lt; endl;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">int main()</div>
+<div class="line">{</div>
+<div class="line">    TaskManager Tasker;</div>
+<div class="line"> </div>
+<div class="line">    cout &lt;&lt; std::setprecision(2);</div>
+<div class="line"> </div>
+<div class="line">    while(1)</div>
+<div class="line">    {</div>
+<div class="line">        Sleep(1000);</div>
+<div class="line">        Tasker.Scan();</div>
+<div class="line"> </div>
+<div class="line">        auto Data = Tasker.ExtrudeStatisticsFromProcesses();</div>
+<div class="line">        std::remove_if(Data.begin(), Data.end(), [](auto&amp; a) { return a.CPUUsage == 0.; });</div>
+<div class="line">        std::sort(Data.begin(), Data.end(), [](auto&amp; a, auto&amp; b) { return a.PID &lt; b.PID; });</div>
+<div class="line">        Data.resize(10);</div>
+<div class="line">        for (auto&amp; Stat : Data)</div>
+<div class="line">        {</div>
+<div class="line">            printRow(Stat);</div>
+<div class="line">        }</div>
+<div class="line">        // =&gt; |   960 |                          fsnotifier |    0 |       2.7  Mb |   5.4e+02  kb |</div>
+<div class="line">        // =&gt; |  1056 |                         nvcontainer |    0 |        67  Mb |        46  Mb |</div>
+<div class="line">        // =&gt; |  1088 |             StartMenuExperienceHost |    0 |        74  Mb |        24  Mb |</div>
+<div class="line">        // =&gt; |  2092 |                       RuntimeBroker |    0 |        19  Mb |       3.8  Mb |</div>
+<div class="line">        // =&gt; |  2328 |                       TextInputHost |    0 |        54  Mb |        35  Mb |</div>
+<div class="line">        // =&gt; |  3100 |                             conhost |    0 |        17  Mb |       7.3  Mb |</div>
+<div class="line">        // =&gt; |  3200 |                       GoogleDriveFS |    0 |        27  Mb |        13  Mb |</div>
+<div class="line">        // =&gt; |  3624 |                       GoogleDriveFS |    0 |     1e+02  Mb |        54  Mb |</div>
+<div class="line">        // =&gt; |  3828 |                        NVIDIA Share |    0 |        81  Mb |        55  Mb |</div>
+<div class="line">        // =&gt; |  4028 |                      ProcessManager |  1.8 |        45  Mb |        37  Mb |</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    return 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Feedback &amp; Contacts</h1>
+<p >You can send me e-mail: <a href="#" onclick="location.href='mai'+'lto:'+'Val'+'er'+'ii.'+'Ko'+'niu'+'sh'+'enk'+'o@'+'gma'+'il'+'.co'+'m'; return false;">Valer<span class="obfuscator">.nosp@m.</span>ii.K<span class="obfuscator">.nosp@m.</span>onius<span class="obfuscator">.nosp@m.</span>henk<span class="obfuscator">.nosp@m.</span>o@gma<span class="obfuscator">.nosp@m.</span>il.c<span class="obfuscator">.nosp@m.</span>om</a> or try to find me in telegram: @markmoran24 </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
