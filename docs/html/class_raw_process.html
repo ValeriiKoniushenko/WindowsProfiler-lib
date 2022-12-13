@@ -74,12 +74,13 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_raw_process-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">RawProcess Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The main class that represent one process.  
+ <a href="class_raw_process.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_raw_process_8h_source.html">RawProcess.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -88,37 +89,31 @@ Inheritance diagram for RawProcess:</div>
  <div class="center">
   <img src="class_raw_process.png" usemap="#RawProcess_map" alt=""/>
   <map id="RawProcess_map" name="RawProcess_map">
-<area href="class_object.html" alt="Object" shape="rect" coords="0,0,82,24"/>
+<area href="class_object.html" title="The base class for setting params to all objects." alt="Object" shape="rect" coords="0,0,82,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_raw_process_1_1_statistics.html">Statistics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes statistics for one process.  <a href="struct_raw_process_1_1_statistics.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c805bafe36fb5d23017f39f406aea6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#a9c805bafe36fb5d23017f39f406aea6e">RawProcess</a> ()</td></tr>
-<tr class="memdesc:a9c805bafe36fb5d23017f39f406aea6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="class_raw_process.html#a9c805bafe36fb5d23017f39f406aea6e">More...</a><br /></td></tr>
 <tr class="separator:a9c805bafe36fb5d23017f39f406aea6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02987c0ecd258c97628566d53610f8cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#a02987c0ecd258c97628566d53610f8cd">RawProcess</a> (DWORD Pid)</td></tr>
-<tr class="memdesc:a02987c0ecd258c97628566d53610f8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can pass PID and monitor only one process.  <a href="class_raw_process.html#a02987c0ecd258c97628566d53610f8cd">More...</a><br /></td></tr>
 <tr class="separator:a02987c0ecd258c97628566d53610f8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a702bb976b6bd9d6bfd5a2a1961351d32"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#a702bb976b6bd9d6bfd5a2a1961351d32">~RawProcess</a> ()</td></tr>
-<tr class="memdesc:a702bb976b6bd9d6bfd5a2a1961351d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default virtual destructor.  <a href="class_raw_process.html#a702bb976b6bd9d6bfd5a2a1961351d32">More...</a><br /></td></tr>
 <tr class="separator:a702bb976b6bd9d6bfd5a2a1961351d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a152d7604352f3ceb9d3f9498f35c4f81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#a152d7604352f3ceb9d3f9498f35c4f81">RawProcess</a> (const <a class="el" href="class_raw_process.html">RawProcess</a> &amp;)=delete</td></tr>
-<tr class="memdesc:a152d7604352f3ceb9d3f9498f35c4f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy-constructor  <a href="class_raw_process.html#a152d7604352f3ceb9d3f9498f35c4f81">More...</a><br /></td></tr>
 <tr class="separator:a152d7604352f3ceb9d3f9498f35c4f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5508ff1886d3581b3916061125321d8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_raw_process.html">RawProcess</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#a5508ff1886d3581b3916061125321d8e">operator=</a> (const <a class="el" href="class_raw_process.html">RawProcess</a> &amp;)=delete</td></tr>
-<tr class="memdesc:a5508ff1886d3581b3916061125321d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy-assign-operator the same object  <a href="class_raw_process.html#a5508ff1886d3581b3916061125321d8e">More...</a><br /></td></tr>
 <tr class="separator:a5508ff1886d3581b3916061125321d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a628242be66872277caee4d0a3e2c92ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#a628242be66872277caee4d0a3e2c92ed">RawProcess</a> (<a class="el" href="class_raw_process.html">RawProcess</a> &amp;&amp;)</td></tr>
-<tr class="memdesc:a628242be66872277caee4d0a3e2c92ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">move-constructor  <a href="class_raw_process.html#a628242be66872277caee4d0a3e2c92ed">More...</a><br /></td></tr>
 <tr class="separator:a628242be66872277caee4d0a3e2c92ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11c32391bfe3124fea71232f720378fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_raw_process.html">RawProcess</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#a11c32391bfe3124fea71232f720378fe">operator=</a> (<a class="el" href="class_raw_process.html">RawProcess</a> &amp;&amp;)</td></tr>
-<tr class="memdesc:a11c32391bfe3124fea71232f720378fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">move-assign-operator the same object  <a href="class_raw_process.html#a11c32391bfe3124fea71232f720378fe">More...</a><br /></td></tr>
 <tr class="separator:a11c32391bfe3124fea71232f720378fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89dd51c7fc2f5548671cf8c39de05e91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#a89dd51c7fc2f5548671cf8c39de05e91">Open</a> (DWORD PID)</td></tr>
 <tr class="memdesc:a89dd51c7fc2f5548671cf8c39de05e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can pass PID and monitor only one process.  <a href="class_raw_process.html#a89dd51c7fc2f5548671cf8c39de05e91">More...</a><br /></td></tr>
@@ -153,32 +148,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5547296d5a96fe5f8cef430d65d4d688 inherit pub_methods_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to clear data for overloaded operator= and for copy\move constructs.  <a href="class_object.html#a5547296d5a96fe5f8cef430d65d4d688">More...</a><br /></td></tr>
 <tr class="separator:a5547296d5a96fe5f8cef430d65d4d688 inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a6700b4208a0a731e261c1b5bb5524e36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#a6700b4208a0a731e261c1b5bb5524e36">ClearData</a> () override</td></tr>
-<tr class="memdesc:a6700b4208a0a731e261c1b5bb5524e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to clear data for overloaded operator= and for copy\move constructs.  <a href="class_raw_process.html#a6700b4208a0a731e261c1b5bb5524e36">More...</a><br /></td></tr>
-<tr class="separator:a6700b4208a0a731e261c1b5bb5524e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e68e9d2fd34ff23e9374ad2a9216403"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#a5e68e9d2fd34ff23e9374ad2a9216403">ProcessIdToProcessPath</a> (DWORD processId)</td></tr>
-<tr class="separator:a5e68e9d2fd34ff23e9374ad2a9216403"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a35ba9d835708c177e17232fbfd07200f"><td class="memItemLeft" align="right" valign="top">HANDLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#a35ba9d835708c177e17232fbfd07200f">Handle</a> {}</td></tr>
-<tr class="separator:a35ba9d835708c177e17232fbfd07200f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad044a2a38fcde8b6c8d8b7a8f2f7b4a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_p_u_tracker.html">CPUTracker</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#ad044a2a38fcde8b6c8d8b7a8f2f7b4a0">CPUTracker_</a></td></tr>
-<tr class="separator:ad044a2a38fcde8b6c8d8b7a8f2f7b4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f2eb63ae2a15804615b782258cdb515"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_memory_tracker.html">MemoryTracker</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#a5f2eb63ae2a15804615b782258cdb515">MemoryTracker_</a></td></tr>
-<tr class="separator:a5f2eb63ae2a15804615b782258cdb515"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad70d0ac53d9dd6dd0a3199734744d62e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_raw_process_1_1_statistics.html">Statistics</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_raw_process.html#ad70d0ac53d9dd6dd0a3199734744d62e">Statistics_</a></td></tr>
-<tr class="separator:ad70d0ac53d9dd6dd0a3199734744d62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_object"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_object')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_object.html">Object</a></td></tr>
 <tr class="memitem:afe9eeddd7068a37f62d3276a2fb49864 inherit pro_methods_class_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#afe9eeddd7068a37f62d3276a2fb49864">Object</a> ()=default</td></tr>
 <tr class="separator:afe9eeddd7068a37f62d3276a2fb49864 inherit pro_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >The main class that represent one process. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9c805bafe36fb5d23017f39f406aea6e" name="a9c805bafe36fb5d23017f39f406aea6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c805bafe36fb5d23017f39f406aea6e">&#9670;&#160;</a></span>RawProcess() <span class="overload">[1/4]</span></h2>
 
@@ -193,14 +171,6 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Default constructor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">void</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -219,14 +189,6 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>You can pass PID and monitor only one process. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Pid</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -252,14 +214,6 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Default virtual destructor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">void</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -287,14 +241,6 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>copy-constructor </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">the</td><td>same object </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
 <a id="a628242be66872277caee4d0a3e2c92ed" name="a628242be66872277caee4d0a3e2c92ed"></a>
@@ -313,53 +259,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>move-constructor </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">the</td><td>same object </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6700b4208a0a731e261c1b5bb5524e36" name="a6700b4208a0a731e261c1b5bb5524e36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6700b4208a0a731e261c1b5bb5524e36">&#9670;&#160;</a></span>ClearData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RawProcess::ClearData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Try to clear data for overloaded operator= and for copy\move constructs. </p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">void</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="class_object.html#a5547296d5a96fe5f8cef430d65d4d688">Object</a>.</p>
-
-</div>
-</div>
 <a id="a211f2743599527b7714c171a586262f3" name="a211f2743599527b7714c171a586262f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a211f2743599527b7714c171a586262f3">&#9670;&#160;</a></span>Close()</h2>
 
@@ -434,7 +336,7 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_raw_process_1_1_statistics.html">Statistics</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_raw_process_1_1_statistics.html" title="Describes statistics for one process.">Statistics</a> </dd></dl>
 
 </div>
 </div>
@@ -483,7 +385,7 @@ Additional Inherited Members</h2></td></tr>
 <p>You can pass PID and monitor only one process. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Pid</td><td></td></tr>
+    <tr><td class="paramname">DWORD</td><td>Pid </td></tr>
   </table>
   </dd>
 </dl>
@@ -515,14 +417,6 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>copy-assign-operator the same object </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">void</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
 <a id="a11c32391bfe3124fea71232f720378fe" name="a11c32391bfe3124fea71232f720378fe"></a>
@@ -539,40 +433,6 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>move-assign-operator the same object </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">void</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a5e68e9d2fd34ff23e9374ad2a9216403" name="a5e68e9d2fd34ff23e9374ad2a9216403"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e68e9d2fd34ff23e9374ad2a9216403">&#9670;&#160;</a></span>ProcessIdToProcessPath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string RawProcess::ProcessIdToProcessPath </td>
-          <td>(</td>
-          <td class="paramtype">DWORD&#160;</td>
-          <td class="paramname"><em>processId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -600,95 +460,6 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool - true if successfully, false - in other cases </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad044a2a38fcde8b6c8d8b7a8f2f7b4a0" name="ad044a2a38fcde8b6c8d8b7a8f2f7b4a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad044a2a38fcde8b6c8d8b7a8f2f7b4a0">&#9670;&#160;</a></span>CPUTracker_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_c_p_u_tracker.html">CPUTracker</a> RawProcess::CPUTracker_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a35ba9d835708c177e17232fbfd07200f" name="a35ba9d835708c177e17232fbfd07200f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35ba9d835708c177e17232fbfd07200f">&#9670;&#160;</a></span>Handle</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">HANDLE RawProcess::Handle {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5f2eb63ae2a15804615b782258cdb515" name="a5f2eb63ae2a15804615b782258cdb515"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f2eb63ae2a15804615b782258cdb515">&#9670;&#160;</a></span>MemoryTracker_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_memory_tracker.html">MemoryTracker</a> RawProcess::MemoryTracker_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad70d0ac53d9dd6dd0a3199734744d62e" name="ad70d0ac53d9dd6dd0a3199734744d62e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad70d0ac53d9dd6dd0a3199734744d62e">&#9670;&#160;</a></span>Statistics_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_raw_process_1_1_statistics.html">Statistics</a> RawProcess::Statistics_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>

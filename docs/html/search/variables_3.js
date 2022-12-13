@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['memorytracker_5f_0',['MemoryTracker_',['../class_raw_process.html#a5f2eb63ae2a15804615b782258cdb515',1,'RawProcess']]]
+  ['ramusage_0',['RAMUsage',['../struct_raw_process_1_1_statistics.html#a1ad53abfc9f77dba6c188cbacdc9da4a',1,'RawProcess::Statistics']]]
 ];

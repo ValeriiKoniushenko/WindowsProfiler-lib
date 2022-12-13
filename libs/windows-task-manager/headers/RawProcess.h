@@ -7,9 +7,15 @@
 #include <string>
 #include <ostream>
 
+/**
+ * @brief The main class that represent one process.
+ */
 class RawProcess : public Object
 {
 public:
+	/**
+	 * @brief Describes statistics for one process
+	 */
 	struct Statistics
 	{
 		std::string Name;
@@ -20,51 +26,17 @@ public:
 		std::string PathToProcess;
 	};
 
-	/**
-	 * @brief Default constructor
-	 * @param void
-	 */
 	RawProcess();
-
-	/**
-	 * @brief You can pass PID and monitor only one process
-	 * @param Pid
-	 */
 	RawProcess(DWORD Pid);
-
-	/**
-	 * @brief Default virtual destructor
-	 * @param void
-	 */
 	virtual ~RawProcess();
-
-	/**
-	 * @brief copy-constructor
-	 * @param the same object
-	 */
 	RawProcess(const RawProcess&) = delete;
-
-	/**
-	 * @brief copy-assign-operator the same object
-	 * @param void
-	 */
 	RawProcess& operator=(const RawProcess&) = delete;
-
-	/**
-	 * @brief move-constructor
-	 * @param the same object
-	 */
 	RawProcess(RawProcess&&);
-
-	/**
-	 * @brief move-assign-operator the same object
-	 * @param void
-	 */
 	RawProcess& operator=(RawProcess&&);
 
 	/**
 	 * @brief You can pass PID and monitor only one process
-	 * @param Pid
+	 * @param DWORD Pid
 	 * @return bool - tru if opened, false - in other casese
 	 */
 	bool Open(DWORD PID);

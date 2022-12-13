@@ -73,12 +73,13 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_memory_tracker-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">MemoryTracker Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Allows to track Memory data.  
+ <a href="class_memory_tracker.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_memory_tracker_8h_source.html">MemoryTracker.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -87,13 +88,13 @@ Inheritance diagram for MemoryTracker:</div>
  <div class="center">
   <img src="class_memory_tracker.png" usemap="#MemoryTracker_map" alt=""/>
   <map id="MemoryTracker_map" name="MemoryTracker_map">
-<area href="class_object.html" alt="Object" shape="rect" coords="0,0,102,24"/>
+<area href="class_object.html" title="The base class for setting params to all objects." alt="Object" shape="rect" coords="0,0,102,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4cda72a1950c4a62f384f004f1e09668"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_tracker.html#a4cda72a1950c4a62f384f004f1e09668">MemoryTracker</a> (HANDLE &amp;<a class="el" href="class_memory_tracker.html#ad48bfc040d9e061cd078f95a5d6848d1">Handle</a>)</td></tr>
+<tr class="memitem:a4cda72a1950c4a62f384f004f1e09668"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_tracker.html#a4cda72a1950c4a62f384f004f1e09668">MemoryTracker</a> (HANDLE &amp;Handle)</td></tr>
 <tr class="separator:a4cda72a1950c4a62f384f004f1e09668"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a478d4039d4f9b6b1d126c230a89a7a77"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_tracker.html#a478d4039d4f9b6b1d126c230a89a7a77">~MemoryTracker</a> () override</td></tr>
 <tr class="separator:a478d4039d4f9b6b1d126c230a89a7a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,8 +107,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af8d12ffeb34c0275b6f8d81e2e945e83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_memory_tracker.html">MemoryTracker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_tracker.html#af8d12ffeb34c0275b6f8d81e2e945e83">operator=</a> (<a class="el" href="class_memory_tracker.html">MemoryTracker</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:af8d12ffeb34c0275b6f8d81e2e945e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62876cfcc49185e1e460393acb91bf06"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_tracker.html#a62876cfcc49185e1e460393acb91bf06">RAMUsage</a> () const</td></tr>
+<tr class="memdesc:a62876cfcc49185e1e460393acb91bf06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to get access to the RAM usage.  <a href="class_memory_tracker.html#a62876cfcc49185e1e460393acb91bf06">More...</a><br /></td></tr>
 <tr class="separator:a62876cfcc49185e1e460393acb91bf06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab8d692b8045fd4bc6cc0995d6285024"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_tracker.html#aab8d692b8045fd4bc6cc0995d6285024">VirtualMemoryUsage</a> () const</td></tr>
+<tr class="memdesc:aab8d692b8045fd4bc6cc0995d6285024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to get access to the Virtual Memory usage.  <a href="class_memory_tracker.html#aab8d692b8045fd4bc6cc0995d6285024">More...</a><br /></td></tr>
 <tr class="separator:aab8d692b8045fd4bc6cc0995d6285024"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_object.html">Object</a></td></tr>
 <tr class="memitem:a226f2ae2af766b77d83c09a4d766b725 inherit pub_methods_class_object"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#a226f2ae2af766b77d83c09a4d766b725">~Object</a> ()=default</td></tr>
@@ -124,24 +127,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5547296d5a96fe5f8cef430d65d4d688 inherit pub_methods_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to clear data for overloaded operator= and for copy\move constructs.  <a href="class_object.html#a5547296d5a96fe5f8cef430d65d4d688">More...</a><br /></td></tr>
 <tr class="separator:a5547296d5a96fe5f8cef430d65d4d688 inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a7999595fdf46a1146a85b23fe8ba10ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_tracker.html#a7999595fdf46a1146a85b23fe8ba10ca">ClearData</a> () override</td></tr>
-<tr class="memdesc:a7999595fdf46a1146a85b23fe8ba10ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to clear data for overloaded operator= and for copy\move constructs.  <a href="class_memory_tracker.html#a7999595fdf46a1146a85b23fe8ba10ca">More...</a><br /></td></tr>
-<tr class="separator:a7999595fdf46a1146a85b23fe8ba10ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:ad48bfc040d9e061cd078f95a5d6848d1"><td class="memItemLeft" align="right" valign="top">HANDLE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_tracker.html#ad48bfc040d9e061cd078f95a5d6848d1">Handle</a> {}</td></tr>
-<tr class="separator:ad48bfc040d9e061cd078f95a5d6848d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_object"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_object')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_object.html">Object</a></td></tr>
 <tr class="memitem:afe9eeddd7068a37f62d3276a2fb49864 inherit pro_methods_class_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#afe9eeddd7068a37f62d3276a2fb49864">Object</a> ()=default</td></tr>
 <tr class="separator:afe9eeddd7068a37f62d3276a2fb49864 inherit pro_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Allows to track Memory data. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4cda72a1950c4a62f384f004f1e09668" name="a4cda72a1950c4a62f384f004f1e09668"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4cda72a1950c4a62f384f004f1e09668">&#9670;&#160;</a></span>MemoryTracker() <span class="overload">[1/3]</span></h2>
 
@@ -238,42 +232,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7999595fdf46a1146a85b23fe8ba10ca" name="a7999595fdf46a1146a85b23fe8ba10ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7999595fdf46a1146a85b23fe8ba10ca">&#9670;&#160;</a></span>ClearData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MemoryTracker::ClearData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Try to clear data for overloaded operator= and for copy\move constructs. </p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">void</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="class_object.html#a5547296d5a96fe5f8cef430d65d4d688">Object</a>.</p>
-
-</div>
-</div>
 <a id="a4a7c0d21d8794898aa879b852a9c91f2" name="a4a7c0d21d8794898aa879b852a9c91f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a7c0d21d8794898aa879b852a9c91f2">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -341,6 +299,15 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Allows to get access to the RAM usage. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::size_t count of bytes that now a process uses </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aab8d692b8045fd4bc6cc0995d6285024" name="aab8d692b8045fd4bc6cc0995d6285024"></a>
@@ -358,28 +325,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad48bfc040d9e061cd078f95a5d6848d1" name="ad48bfc040d9e061cd078f95a5d6848d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad48bfc040d9e061cd078f95a5d6848d1">&#9670;&#160;</a></span>Handle</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">HANDLE* MemoryTracker::Handle {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Allows to get access to the Virtual Memory usage. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::size_t count of bytes that now a process uses </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

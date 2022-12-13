@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['initcputracker_0',['InitCPUTracker',['../class_c_p_u_tracker.html#aeb617394e34d899de64ff94587d3656d',1,'CPUTracker']]],
-  ['isopened_1',['IsOpened',['../class_raw_process.html#ab76083ddb2c9c24feab050af95885530',1,'RawProcess']]]
+  ['kb_0',['kb',['../namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edecaba34ea40525a4379add785228e37fe86',1,'Utils']]]
 ];

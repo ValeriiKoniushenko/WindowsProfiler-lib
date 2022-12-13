@@ -6,7 +6,7 @@
 #include <vector>
 
 /**
- *
+ * @brief The main class for working with processes set
  */
 class TaskManager final
 {
@@ -48,9 +48,32 @@ public:
 	 */
 	std::vector<RawProcess::Statistics> ExtrudeStatisticsFromProcesses() const;
 
+	/**
+	 * @brief Needed to work with range based for. Returns an iterator to the begin
+	 * @param void
+	 * @return ContainerT::iterator
+	 */
 	ContainerT::iterator begin();
+
+	/**
+	 * @brief Needed to work with range based for. Returns a constant iterator to the begin
+	 * @param void
+	 * @return ContainerT::const_iterator
+	 */
 	ContainerT::const_iterator begin() const;
+
+	/**
+	 * @brief Needed to work with range based for. Returns an iterator to the end
+	 * @param void
+	 * @return ContainerT::iterator
+	 */
 	ContainerT::iterator end();
+
+	/**
+	 * @brief Needed to work with range based for. Returns a constant iterator to the end
+	 * @param void
+	 * @return ContainerT::const_iterator
+	 */
 	ContainerT::const_iterator end() const;
 
 private:

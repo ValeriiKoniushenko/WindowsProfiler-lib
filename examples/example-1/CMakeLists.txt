@@ -5,4 +5,3 @@ target_link_libraries(
 	Example1 PUBLIC 
 	WindowsTaskManager
 )
-

@@ -2,6 +2,11 @@
 \label{class_task_manager}\index{TaskManager@{TaskManager}}
 
 
+The main class for working with processes set.  
+
+
+
+
 {\ttfamily \#include $<$Task\+Manager.\+h$>$}
 
 \doxysubsection*{Public Types}
@@ -33,19 +38,17 @@ const \mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{Con
 std\+::vector$<$ \mbox{\hyperlink{struct_raw_process_1_1_statistics}{Raw\+Process\+::\+Statistics}} $>$ \mbox{\hyperlink{class_task_manager_a837605ffc01f898cb618a2511b37ef0b}{Extrude\+Statistics\+From\+Processes}} () const
 \begin{DoxyCompactList}\small\item\em Helps to extrude all Statistics from a processes. \end{DoxyCompactList}\item 
 Container\+T\+::iterator \mbox{\hyperlink{class_task_manager_a2c790a7fef3fddbf3fd70a7f29b5d1c2}{begin}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Needed to work with range based for. Returns an iterator to the begin. \end{DoxyCompactList}\item 
 Container\+T\+::const\+\_\+iterator \mbox{\hyperlink{class_task_manager_af77ffb0d53af5ce49ed9fff9f3134840}{begin}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Needed to work with range based for. Returns a constant iterator to the begin. \end{DoxyCompactList}\item 
 Container\+T\+::iterator \mbox{\hyperlink{class_task_manager_af617028497330f47719e7d4a60cf78d3}{end}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Needed to work with range based for. Returns an iterator to the end. \end{DoxyCompactList}\item 
 Container\+T\+::const\+\_\+iterator \mbox{\hyperlink{class_task_manager_ac53f3867628c1f962bea8883dc72701d}{end}} () const
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{ContainerT}} \mbox{\hyperlink{class_task_manager_a83186e9b3a23b981a348405bff4daa4d}{Processes}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Needed to work with range based for. Returns a constant iterator to the end. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The main class for working with processes set. 
 
 \doxysubsection{Member Typedef Documentation}
 \mbox{\Hypertarget{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}\label{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}} 
@@ -90,24 +93,72 @@ Container\+T\+::const\+\_\+iterator \mbox{\hyperlink{class_task_manager_ac53f386
 \doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Task\+Manager\+::\+Container\+T\+::iterator Task\+Manager\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Needed to work with range based for. Returns an iterator to the begin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Container\+T\+::iterator 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_task_manager_af77ffb0d53af5ce49ed9fff9f3134840}\label{class_task_manager_af77ffb0d53af5ce49ed9fff9f3134840}} 
 \index{TaskManager@{TaskManager}!begin@{begin}}
 \index{begin@{begin}!TaskManager@{TaskManager}}
 \doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Task\+Manager\+::\+Container\+T\+::const\+\_\+iterator Task\+Manager\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Needed to work with range based for. Returns a constant iterator to the begin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Container\+T\+::const\+\_\+iterator 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_task_manager_af617028497330f47719e7d4a60cf78d3}\label{class_task_manager_af617028497330f47719e7d4a60cf78d3}} 
 \index{TaskManager@{TaskManager}!end@{end}}
 \index{end@{end}!TaskManager@{TaskManager}}
 \doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Task\+Manager\+::\+Container\+T\+::iterator Task\+Manager\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Needed to work with range based for. Returns an iterator to the end. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Container\+T\+::iterator 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_task_manager_ac53f3867628c1f962bea8883dc72701d}\label{class_task_manager_ac53f3867628c1f962bea8883dc72701d}} 
 \index{TaskManager@{TaskManager}!end@{end}}
 \index{end@{end}!TaskManager@{TaskManager}}
 \doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Task\+Manager\+::\+Container\+T\+::const\+\_\+iterator Task\+Manager\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Needed to work with range based for. Returns a constant iterator to the end. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Container\+T\+::const\+\_\+iterator 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_task_manager_a837605ffc01f898cb618a2511b37ef0b}\label{class_task_manager_a837605ffc01f898cb618a2511b37ef0b}} 
 \index{TaskManager@{TaskManager}!ExtrudeStatisticsFromProcesses@{ExtrudeStatisticsFromProcesses}}
 \index{ExtrudeStatisticsFromProcesses@{ExtrudeStatisticsFromProcesses}!TaskManager@{TaskManager}}
@@ -192,12 +243,3 @@ Helps to scan or rescan all processes in the Windows.
 \begin{DoxyReturn}{Returns}
 bool -\/ true if scan was successful; false -\/ if failed. 
 \end{DoxyReturn}
-
-
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_task_manager_a83186e9b3a23b981a348405bff4daa4d}\label{class_task_manager_a83186e9b3a23b981a348405bff4daa4d}} 
-\index{TaskManager@{TaskManager}!Processes@{Processes}}
-\index{Processes@{Processes}!TaskManager@{TaskManager}}
-\doxysubsubsection{\texorpdfstring{Processes}{Processes}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_task_manager_a343101a7ab4e8a0a98e599568de95b60}{ContainerT}} Task\+Manager\+::\+Processes\hspace{0.3cm}{\ttfamily [private]}}
-

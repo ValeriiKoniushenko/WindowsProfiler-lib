@@ -2,7 +2,7 @@
 \label{class_c_p_u_tracker}\index{CPUTracker@{CPUTracker}}
 
 
-about a class  
+Allows to track CPU data.  
 
 
 
@@ -18,7 +18,7 @@ Inheritance diagram for CPUTracker\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_c_p_u_tracker_a40ac8a7ff6b1a450bf80517855392b32}{CPUTracker}} (HANDLE \&\mbox{\hyperlink{class_c_p_u_tracker_acfdf99c929ad739e0b8a13b9cffc172c}{Handle}})
+\mbox{\hyperlink{class_c_p_u_tracker_a40ac8a7ff6b1a450bf80517855392b32}{CPUTracker}} (HANDLE \&Handle)
 \item 
 \mbox{\hyperlink{class_c_p_u_tracker_adfd0dc510c6791891d247362ab751dd7}{$\sim$\+CPUTracker}} ()
 \item 
@@ -33,29 +33,16 @@ Inheritance diagram for CPUTracker\+:\begin{figure}[H]
 virtual void \mbox{\hyperlink{class_c_p_u_tracker_a67e001f840f756f897ab572ea89f80b3}{Clear\+Data}} () override
 \begin{DoxyCompactList}\small\item\em Try to clear data for overloaded operator= and for copy\textbackslash{}move constructs. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_c_p_u_tracker_aeb617394e34d899de64ff94587d3656d}{Init\+CPUTracker}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Init CPU tracker. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_c_p_u_tracker_a6d14abb9a340ca71f7c9a6de22569499}{Get\+Cpu\+Usage}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em return a current CPU usage in percent \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_c_p_u_tracker_a80daf6532837855fb2e707ab48b2a9c8}{Get\+Priority}} () const
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-HANDLE $\ast$ \mbox{\hyperlink{class_c_p_u_tracker_acfdf99c929ad739e0b8a13b9cffc172c}{Handle}} \{\}
-\item 
-ULARGE\+\_\+\+INTEGER \mbox{\hyperlink{class_c_p_u_tracker_a2a28bcb7844a4340dcb76f58672aab0a}{Last\+CPU}} \{\}
-\item 
-ULARGE\+\_\+\+INTEGER \mbox{\hyperlink{class_c_p_u_tracker_a8a68bc5e62738ce9c82903435f13a695}{Last\+Sys\+CPU}} \{\}
-\item 
-ULARGE\+\_\+\+INTEGER \mbox{\hyperlink{class_c_p_u_tracker_a05a9d43caca1a3a191a6f5a6caef88f2}{Last\+User\+CPU}} \{\}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em returns a process priority \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
-about a class 
-
-Hello world 
+Allows to track CPU data. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_c_p_u_tracker_a40ac8a7ff6b1a450bf80517855392b32}\label{class_c_p_u_tracker_a40ac8a7ff6b1a450bf80517855392b32}} 
@@ -113,18 +100,54 @@ Implements \mbox{\hyperlink{class_object_a5547296d5a96fe5f8cef430d65d4d688}{Obje
 \doxysubsubsection{\texorpdfstring{GetCpuUsage()}{GetCpuUsage()}}
 {\footnotesize\ttfamily double CPUTracker\+::\+Get\+Cpu\+Usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+return a current CPU usage in percent 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_c_p_u_tracker_a80daf6532837855fb2e707ab48b2a9c8}\label{class_c_p_u_tracker_a80daf6532837855fb2e707ab48b2a9c8}} 
 \index{CPUTracker@{CPUTracker}!GetPriority@{GetPriority}}
 \index{GetPriority@{GetPriority}!CPUTracker@{CPUTracker}}
 \doxysubsubsection{\texorpdfstring{GetPriority()}{GetPriority()}}
 {\footnotesize\ttfamily std\+::string CPUTracker\+::\+Get\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+returns a process priority 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_c_p_u_tracker_aeb617394e34d899de64ff94587d3656d}\label{class_c_p_u_tracker_aeb617394e34d899de64ff94587d3656d}} 
 \index{CPUTracker@{CPUTracker}!InitCPUTracker@{InitCPUTracker}}
 \index{InitCPUTracker@{InitCPUTracker}!CPUTracker@{CPUTracker}}
 \doxysubsubsection{\texorpdfstring{InitCPUTracker()}{InitCPUTracker()}}
 {\footnotesize\ttfamily void CPUTracker\+::\+Init\+CPUTracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Init CPU tracker. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_c_p_u_tracker_a57b106eb357a8caa92f58741723808e8}\label{class_c_p_u_tracker_a57b106eb357a8caa92f58741723808e8}} 
 \index{CPUTracker@{CPUTracker}!operator=@{operator=}}
 \index{operator=@{operator=}!CPUTracker@{CPUTracker}}
@@ -136,31 +159,4 @@ Implements \mbox{\hyperlink{class_object_a5547296d5a96fe5f8cef430d65d4d688}{Obje
 \index{operator=@{operator=}!CPUTracker@{CPUTracker}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}} \& CPUTracker\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
-
-
-
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_c_p_u_tracker_acfdf99c929ad739e0b8a13b9cffc172c}\label{class_c_p_u_tracker_acfdf99c929ad739e0b8a13b9cffc172c}} 
-\index{CPUTracker@{CPUTracker}!Handle@{Handle}}
-\index{Handle@{Handle}!CPUTracker@{CPUTracker}}
-\doxysubsubsection{\texorpdfstring{Handle}{Handle}}
-{\footnotesize\ttfamily HANDLE$\ast$ CPUTracker\+::\+Handle \{\}\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_c_p_u_tracker_a2a28bcb7844a4340dcb76f58672aab0a}\label{class_c_p_u_tracker_a2a28bcb7844a4340dcb76f58672aab0a}} 
-\index{CPUTracker@{CPUTracker}!LastCPU@{LastCPU}}
-\index{LastCPU@{LastCPU}!CPUTracker@{CPUTracker}}
-\doxysubsubsection{\texorpdfstring{LastCPU}{LastCPU}}
-{\footnotesize\ttfamily ULARGE\+\_\+\+INTEGER CPUTracker\+::\+Last\+CPU \{\}\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_c_p_u_tracker_a8a68bc5e62738ce9c82903435f13a695}\label{class_c_p_u_tracker_a8a68bc5e62738ce9c82903435f13a695}} 
-\index{CPUTracker@{CPUTracker}!LastSysCPU@{LastSysCPU}}
-\index{LastSysCPU@{LastSysCPU}!CPUTracker@{CPUTracker}}
-\doxysubsubsection{\texorpdfstring{LastSysCPU}{LastSysCPU}}
-{\footnotesize\ttfamily ULARGE\+\_\+\+INTEGER CPUTracker\+::\+Last\+Sys\+CPU \{\}\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_c_p_u_tracker_a05a9d43caca1a3a191a6f5a6caef88f2}\label{class_c_p_u_tracker_a05a9d43caca1a3a191a6f5a6caef88f2}} 
-\index{CPUTracker@{CPUTracker}!LastUserCPU@{LastUserCPU}}
-\index{LastUserCPU@{LastUserCPU}!CPUTracker@{CPUTracker}}
-\doxysubsubsection{\texorpdfstring{LastUserCPU}{LastUserCPU}}
-{\footnotesize\ttfamily ULARGE\+\_\+\+INTEGER CPUTracker\+::\+Last\+User\+CPU \{\}\hspace{0.3cm}{\ttfamily [private]}}
 

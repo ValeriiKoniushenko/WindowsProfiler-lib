@@ -7,9 +7,7 @@
 #include <tlhelp32.h>
 
 /**
- * @class CPUTracker
- * Hello world
- * @brief about a class
+ * @brief Allows to track CPU data
  */
 class CPUTracker : public Object
 {
@@ -21,10 +19,32 @@ public:
 	CPUTracker(CPUTracker&&) = default;
 	CPUTracker& operator=(CPUTracker&&) = default;
 
+	/**
+	 * @brief Try to clear data for overloaded operator= and for copy\move constructs
+	 * @return void
+	 * @param void
+	 */
 	virtual void ClearData() override;
 
+	/**
+	 * @brief Init CPU tracker
+	 * @return void
+	 * @param void
+	 */
 	void InitCPUTracker();
+
+	/**
+	 * @brief return a current CPU usage in percent
+	 * @return void
+	 * @param void
+	 */
 	double GetCpuUsage();
+
+	/**
+	 * @brief returns a process priority
+	 * @return std::string
+	 * @param void
+	 */
 	std::string GetPriority() const;
 
 private:

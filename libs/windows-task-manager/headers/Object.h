@@ -1,5 +1,8 @@
 #pragma once
 
+/**
+ * @brief The base class for setting params to all objects
+ */
 class Object
 {
 public:
