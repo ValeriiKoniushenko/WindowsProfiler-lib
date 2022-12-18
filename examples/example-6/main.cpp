@@ -1,6 +1,7 @@
 #include "TaskManager.h"
 #include "Utils.h"
 
+#include <algorithm>
 #include <iostream>
 
 int main()
