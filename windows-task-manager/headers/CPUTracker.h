@@ -56,7 +56,8 @@ public:
 	double GetCpuUsage();
 
 	/**
-	 * @brief returns a process priority
+	 * @brief returns a process priority like a type of CPUTracker::Priority. You can convert this type to a string using
+	 * Utils::Priority2String.
 	 * @return std::string
 	 * @param void
 	 */

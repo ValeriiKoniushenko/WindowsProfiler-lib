@@ -1,11 +1,3 @@
-# Windows Task Manger [lib]
-## Intro
-Hello everyone! If you read this page, so you need one tool to get more control over your system, and this one tool, I hope, this lib.
-Just download it or clone and connect to your project like opensource or just .lib\include files.
-
-## Examples
-More easier examples with details you can find in the folder 'example'. But now I'll try all abilities of this lib.
-```c++
 #include "TaskManager.h"
 #include "Utils.h"
 
@@ -69,7 +61,3 @@ int main()
 
 	return 0;
 }
-```
-
-## Feedback & Contacts
-You can send me e-mail: Valerii.Koniushenko@gmail.com or try to find me in telegram: @markmoran24

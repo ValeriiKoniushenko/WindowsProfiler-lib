@@ -3,7 +3,7 @@
 namespace Utils
 {
 
-std::string Uits2String(Unit U)
+std::string Units2String(Unit U)
 {
 	if (U == Unit::b)
 	{
@@ -61,10 +61,15 @@ std::pair<double, Unit> b2Fit(std::size_t Bytes)
 	return {result, static_cast<Unit>(Units)};
 }
 
-std::string b2FitString(std::size_t Bytes)
+std::string b2FitString(std::size_t Bytes, bool bIsRoundOff)
 {
 	auto Data = b2Fit(Bytes);
-	return std::to_string(Data.first) + " " + Uits2String(Data.second);
+	if (bIsRoundOff)
+	{
+		return std::to_string(static_cast<std::size_t>(Data.first)) + " " + Units2String(Data.second);
+	}
+
+	return std::to_string(Data.first) + " " + Units2String(Data.second);
 }
 
 std::string Priority2String(CPUTracker::Priority Priority)

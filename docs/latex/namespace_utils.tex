@@ -15,7 +15,7 @@ enum class \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{U
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-std\+::string \mbox{\hyperlink{namespace_utils_a3ef1777d4ea4fb42df165ab306868d39}{Uits2\+String}} (\mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit}} U)
+std\+::string \mbox{\hyperlink{namespace_utils_a259955cdc7eaa08164afab506d5e42d2}{Units2\+String}} (\mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit}} U)
 \begin{DoxyCompactList}\small\item\em Helps to convert a \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit(enum class)}} to a string. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{namespace_utils_a074931515522dbaadc4094a014d1cebe}{b2kb}} (std\+::size\+\_\+t Bytes)
 \begin{DoxyCompactList}\small\item\em Helps to convert a bytes to kbs. \end{DoxyCompactList}\item 
@@ -27,7 +27,7 @@ double \mbox{\hyperlink{namespace_utils_ad4a2c433ae704a507fe0b5a91857822f}{b2\+T
 \begin{DoxyCompactList}\small\item\em Helps to convert a bytes to Tbs. \end{DoxyCompactList}\item 
 std\+::pair$<$ double, \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit}} $>$ \mbox{\hyperlink{namespace_utils_a6163616b95ae079814438f1f161bd957}{b2\+Fit}} (std\+::size\+\_\+t Bytes)
 \begin{DoxyCompactList}\small\item\em Helps to convert a set of bytes to the fitting format. 1123byte -\/\texorpdfstring{$>$}{>} 1.\+123kb, 2356124 -\/\texorpdfstring{$>$}{>} 2.\+356124\+Mb. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{namespace_utils_a051c47dbf28e8598ee0ba2cabf354985}{b2\+Fit\+String}} (std\+::size\+\_\+t Bytes)
+std\+::string \mbox{\hyperlink{namespace_utils_ab74f520de83ef8984248ca02ecf6b25d}{b2\+Fit\+String}} (std\+::size\+\_\+t Bytes, bool b\+Is\+Round\+Off=true)
 \begin{DoxyCompactList}\small\item\em Helps to convert a set of bytes to the fitting string format. 1123byte -\/\texorpdfstring{$>$}{>} 1.\+123kb, 2356124 -\/\texorpdfstring{$>$}{>} 2.\+356124\+Mb. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{namespace_utils_a956fec1369612f5e104abe38ddbab5fc}{Priority2\+String}} (\mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21}{CPUTracker\+::\+Priority}} Priority)
 \begin{DoxyCompactList}\small\item\em Helps to convert a \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21}{CPUTracker\+::\+Priority}} to std\+::string. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -87,11 +87,11 @@ std\+::pair$<$double, Unit$>$
 {\em std\+::size\+\_\+t} & -\/ count of bites \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{namespace_utils_a051c47dbf28e8598ee0ba2cabf354985}\label{namespace_utils_a051c47dbf28e8598ee0ba2cabf354985}} 
+\mbox{\Hypertarget{namespace_utils_ab74f520de83ef8984248ca02ecf6b25d}\label{namespace_utils_ab74f520de83ef8984248ca02ecf6b25d}} 
 \index{Utils@{Utils}!b2FitString@{b2FitString}}
 \index{b2FitString@{b2FitString}!Utils@{Utils}}
 \doxysubsubsection{\texorpdfstring{b2FitString()}{b2FitString()}}
-{\footnotesize\ttfamily std\+::string Utils\+::b2\+Fit\+String (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{Bytes }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::string Utils\+::b2\+Fit\+String (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{Bytes,  }\item[{bool}]{b\+Is\+Round\+Off = {\ttfamily true} }\end{DoxyParamCaption})}
 
 
 
@@ -195,11 +195,11 @@ std\+::string
 {\em \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21}{CPUTracker\+::\+Priority}}} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{namespace_utils_a3ef1777d4ea4fb42df165ab306868d39}\label{namespace_utils_a3ef1777d4ea4fb42df165ab306868d39}} 
-\index{Utils@{Utils}!Uits2String@{Uits2String}}
-\index{Uits2String@{Uits2String}!Utils@{Utils}}
-\doxysubsubsection{\texorpdfstring{Uits2String()}{Uits2String()}}
-{\footnotesize\ttfamily std\+::string Utils\+::\+Uits2\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit}}}]{U }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{namespace_utils_a259955cdc7eaa08164afab506d5e42d2}\label{namespace_utils_a259955cdc7eaa08164afab506d5e42d2}} 
+\index{Utils@{Utils}!Units2String@{Units2String}}
+\index{Units2String@{Units2String}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{Units2String()}{Units2String()}}
+{\footnotesize\ttfamily std\+::string Utils\+::\+Units2\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit}}}]{U }\end{DoxyParamCaption})}
 
 
 

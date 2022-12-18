@@ -3,9 +3,9 @@
 #include "boost/format.hpp"
 
 #include <cmath>
+#include <filesystem>
 #include <memory>
 #include <thread>
-#include <filesystem>
 
 RawProcess::RawProcess(RawProcess&& Other) : CPUTracker_(Handle), MemoryTracker_(Handle)
 {
@@ -48,6 +48,7 @@ void RawProcess::Update()
 	Statistics_.CPUUsage = CPUTracker_.GetCpuUsage();
 	Statistics_.RAMUsage = MemoryTracker_.RAMUsage();
 	Statistics_.VirtualMemoryUsage = MemoryTracker_.VirtualMemoryUsage();
+	Statistics_.Priority = CPUTracker_.GetPriority();
 }
 
 bool RawProcess::Open(DWORD PID)

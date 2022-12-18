@@ -85,8 +85,8 @@ Examples</h1>
 <div class="line">#include &quot;Utils.h&quot;</div>
 <div class="line"> </div>
 <div class="line">#include &lt;algorithm&gt;</div>
-<div class="line">#include &lt;iostream&gt;</div>
 <div class="line">#include &lt;iomanip&gt;</div>
+<div class="line">#include &lt;iostream&gt;</div>
 <div class="line"> </div>
 <div class="line">using std::cout;</div>
 <div class="line">using std::endl;</div>
@@ -98,8 +98,9 @@ Examples</h1>
 <div class="line">    cout &lt;&lt; setw(2 + 5) &lt;&lt; &quot;PID |&quot;;</div>
 <div class="line">    cout &lt;&lt; setw(2 + 36) &lt;&lt; &quot;Name |&quot;;</div>
 <div class="line">    cout &lt;&lt; setw(2 + 5) &lt;&lt; &quot;CPU |&quot;;</div>
-<div class="line">    cout &lt;&lt; setw(3 + 13) &lt;&lt; &quot;RAM |&quot;;</div>
-<div class="line">    cout &lt;&lt; setw(3 + 13) &lt;&lt; &quot;VRAM |&quot;;</div>
+<div class="line">    cout &lt;&lt; setw(2 + 15) &lt;&lt; &quot;RAM |&quot;;</div>
+<div class="line">    cout &lt;&lt; setw(2 + 15) &lt;&lt; &quot;VRAM |&quot;;</div>
+<div class="line">    cout &lt;&lt; setw(2 + 15) &lt;&lt; &quot;Priority |&quot;;</div>
 <div class="line">    cout &lt;&lt; endl;</div>
 <div class="line">}</div>
 <div class="line"> </div>
@@ -109,10 +110,9 @@ Examples</h1>
 <div class="line">    cout &lt;&lt; setw(5) &lt;&lt; Stat.PID &lt;&lt; &quot; |&quot;;</div>
 <div class="line">    cout &lt;&lt; setw(36) &lt;&lt; Stat.Name &lt;&lt; &quot; |&quot;;</div>
 <div class="line">    cout &lt;&lt; setw(5) &lt;&lt; Stat.CPUUsage &lt;&lt; &quot; |&quot;;</div>
-<div class="line">    auto RAM = Utils::b2Fit(Stat.RAMUsage);</div>
-<div class="line">    cout &lt;&lt; setw(10) &lt;&lt; RAM.first &lt;&lt; &quot; &quot; &lt;&lt; setw(3) &lt;&lt; Utils::Uits2String(RAM.second) &lt;&lt; &quot; |&quot;;</div>
-<div class="line">    auto VRAM = Utils::b2Fit(Stat.VirtualMemoryUsage);</div>
-<div class="line">    cout &lt;&lt; setw(10) &lt;&lt; VRAM.first &lt;&lt; &quot; &quot; &lt;&lt; setw(3) &lt;&lt; Utils::Uits2String(VRAM.second) &lt;&lt; &quot; |&quot;;</div>
+<div class="line">    cout &lt;&lt; setw(15) &lt;&lt; Utils::b2FitString(Stat.RAMUsage) &lt;&lt; &quot; |&quot;;</div>
+<div class="line">    cout &lt;&lt; setw(15) &lt;&lt; Utils::b2FitString(Stat.VirtualMemoryUsage) &lt;&lt; &quot; |&quot;;</div>
+<div class="line">    cout &lt;&lt; setw(15) &lt;&lt; Utils::Priority2String(Stat.Priority) &lt;&lt; &quot; |&quot;;</div>
 <div class="line">    cout &lt;&lt; endl;</div>
 <div class="line">}</div>
 <div class="line"> </div>
@@ -122,29 +122,24 @@ Examples</h1>
 <div class="line"> </div>
 <div class="line">    cout &lt;&lt; std::setprecision(2);</div>
 <div class="line"> </div>
-<div class="line">    while(1)</div>
+<div class="line">    while (1)</div>
 <div class="line">    {</div>
 <div class="line">        Sleep(1000);</div>
 <div class="line">        Tasker.Scan();</div>
 <div class="line"> </div>
 <div class="line">        auto Data = Tasker.ExtrudeStatisticsFromProcesses();</div>
-<div class="line">        std::remove_if(Data.begin(), Data.end(), [](auto&amp; a) { return a.CPUUsage == 0.; });</div>
+<div class="line">        Data.erase(std::remove_if(Data.begin(), Data.end(), [](auto&amp; a) { return a.RAMUsage &lt; 1024 * 1024 * 1024; }), Data.end());</div>
 <div class="line">        std::sort(Data.begin(), Data.end(), [](auto&amp; a, auto&amp; b) { return a.PID &lt; b.PID; });</div>
-<div class="line">        Data.resize(10);</div>
+<div class="line"> </div>
+<div class="line">        printHeader();</div>
 <div class="line">        for (auto&amp; Stat : Data)</div>
 <div class="line">        {</div>
 <div class="line">            printRow(Stat);</div>
 <div class="line">        }</div>
-<div class="line">        // =&gt; |   960 |                          fsnotifier |    0 |       2.7  Mb |   5.4e+02  kb |</div>
-<div class="line">        // =&gt; |  1056 |                         nvcontainer |    0 |        67  Mb |        46  Mb |</div>
-<div class="line">        // =&gt; |  1088 |             StartMenuExperienceHost |    0 |        74  Mb |        24  Mb |</div>
-<div class="line">        // =&gt; |  2092 |                       RuntimeBroker |    0 |        19  Mb |       3.8  Mb |</div>
-<div class="line">        // =&gt; |  2328 |                       TextInputHost |    0 |        54  Mb |        35  Mb |</div>
-<div class="line">        // =&gt; |  3100 |                             conhost |    0 |        17  Mb |       7.3  Mb |</div>
-<div class="line">        // =&gt; |  3200 |                       GoogleDriveFS |    0 |        27  Mb |        13  Mb |</div>
-<div class="line">        // =&gt; |  3624 |                       GoogleDriveFS |    0 |     1e+02  Mb |        54  Mb |</div>
-<div class="line">        // =&gt; |  3828 |                        NVIDIA Share |    0 |        81  Mb |        55  Mb |</div>
-<div class="line">        // =&gt; |  4028 |                      ProcessManager |  1.8 |        45  Mb |        37  Mb |</div>
+<div class="line">        // =&gt; |   PID |            Name |  CPU |    RAM |    VRAM |   Priority |</div>
+<div class="line">        // =&gt; |   672 |          clangd |    0 |   2 Gb |    2 Gb |     Normal |</div>
+<div class="line">        // =&gt; | 11256 |   GoogleDriveFS |  1.3 |   1 Gb |    1 Gb |     Normal |</div>
+<div class="line">        // =&gt; | 11572 |         clion64 | 0.54 |   3 Gb |    3 Gb |     Normal |</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    return 0;</div>

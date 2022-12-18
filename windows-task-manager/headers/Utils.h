@@ -24,7 +24,7 @@ enum class Unit
  * @return std::string - unit in the string format
  * @param Unit
  */
-std::string Uits2String(Unit U);
+std::string Units2String(Unit U);
 
 /**
  * @brief Helps to convert a bytes to kbs
@@ -66,7 +66,7 @@ std::pair<double, Unit> b2Fit(std::size_t Bytes);
  * @return std::string
  * @param std::size_t - count of bites
  */
-std::string b2FitString(std::size_t Bytes);
+std::string b2FitString(std::size_t Bytes, bool bIsRoundOff = true);
 
 /**
  * @brief Helps to convert a CPUTracker::Priority to std::string

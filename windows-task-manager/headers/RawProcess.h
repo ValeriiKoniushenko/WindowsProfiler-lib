@@ -4,8 +4,8 @@
 #include "MemoryTracker.h"
 #include "Object.h"
 
-#include <string>
 #include <ostream>
+#include <string>
 
 /**
  * @brief The main class that represent one process.
@@ -24,6 +24,7 @@ public:
 		std::size_t RAMUsage{};
 		std::size_t VirtualMemoryUsage{};
 		std::string PathToProcess;
+		CPUTracker::Priority Priority;
 	};
 
 	RawProcess();

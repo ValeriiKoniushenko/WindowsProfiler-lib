@@ -1,7 +1,7 @@
 var searchData=
 [
   ['b2fit_0',['b2Fit',['../namespace_utils.html#a6163616b95ae079814438f1f161bd957',1,'Utils']]],
-  ['b2fitstring_1',['b2FitString',['../namespace_utils.html#a051c47dbf28e8598ee0ba2cabf354985',1,'Utils']]],
+  ['b2fitstring_1',['b2FitString',['../namespace_utils.html#ab74f520de83ef8984248ca02ecf6b25d',1,'Utils']]],
   ['b2gb_2',['b2Gb',['../namespace_utils.html#a1e7951607d67e4c2a1ebce31a2403586',1,'Utils']]],
   ['b2kb_3',['b2kb',['../namespace_utils.html#a074931515522dbaadc4094a014d1cebe',1,'Utils']]],
   ['b2mb_4',['b2Mb',['../namespace_utils.html#a5a938350859b8b6194bdfc47e5324306',1,'Utils']]],
