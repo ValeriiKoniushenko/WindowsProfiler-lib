@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>WindowsTaskManager-Lib: libs/windows-task-manager/headers/Utils.h Source File</title>
+<title>WindowsTaskManager-Lib: windows-task-manager/headers/Utils.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,7 +71,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_45b977e42486798b40010574addccd92.html">windows-task-manager</a></li><li class="navelem"><a class="el" href="dir_d68ebd753f1d004c99e1795da2d8015e.html">headers</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4b119214f89e4d50d58510c7ed9dcf93.html">windows-task-manager</a></li><li class="navelem"><a class="el" href="dir_9b5b2753456e0e958851d3ded2cf13be.html">headers</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -81,14 +81,14 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="namespace_utils.html">    7</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_utils.html">Utils</a></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edec">   11</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edec">Unit</a></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{       <a class="code hl_enumvalue" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edeca92eb5ffee6ae2fec3ad71c777531578f">b</a>,  <a class="code hl_enumvalue" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edecaba34ea40525a4379add785228e37fe86">kb</a>,     <a class="code hl_enumvalue" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edeca6dd757cbdd852a16f222a7d1a07eab3e">Mb</a>,     <a class="code hl_enumvalue" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edeca1c717215e36a6768f37353c8f554a7d8">Gb</a>,     <a class="code hl_enumvalue" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edecabd63cda5e59ddb168ec03847f26b831b">Tb</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{ <a class="code hl_enumvalue" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edeca92eb5ffee6ae2fec3ad71c777531578f">b</a>, <a class="code hl_enumvalue" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edecaba34ea40525a4379add785228e37fe86">kb</a>, <a class="code hl_enumvalue" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edeca6dd757cbdd852a16f222a7d1a07eab3e">Mb</a>, <a class="code hl_enumvalue" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edeca1c717215e36a6768f37353c8f554a7d8">Gb</a>, <a class="code hl_enumvalue" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edecabd63cda5e59ddb168ec03847f26b831b">Tb</a></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>std::string <a class="code hl_function" href="namespace_utils.html#a3ef1777d4ea4fb42df165ab306868d39">Uits2String</a>(<a class="code hl_enumeration" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edec">Unit</a> U);</div>
@@ -103,8 +103,11 @@ $(function() {
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>std::pair&lt;double, Unit&gt; <a class="code hl_function" href="namespace_utils.html#a6163616b95ae079814438f1f161bd957">b2Fit</a>(std::size_t Bytes);</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}   <span class="comment">// namespace Utils</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="namespace_utils.html#a051c47dbf28e8598ee0ba2cabf354985">   67</a></span>std::string <a class="code hl_function" href="namespace_utils.html#a051c47dbf28e8598ee0ba2cabf354985">b2FitString</a>(std::size_t Bytes);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}    <span class="comment">// namespace Utils</span></div>
 <div class="ttc" id="anamespace_utils_html"><div class="ttname"><a href="namespace_utils.html">Utils</a></div><div class="ttdef"><b>Definition:</b> Utils.h:8</div></div>
+<div class="ttc" id="anamespace_utils_html_a051c47dbf28e8598ee0ba2cabf354985"><div class="ttname"><a href="namespace_utils.html#a051c47dbf28e8598ee0ba2cabf354985">Utils::b2FitString</a></div><div class="ttdeci">std::string b2FitString(std::size_t Bytes)</div><div class="ttdoc">Helps to convert a set of bytes to the fitting string format. 1123byte -&gt; 1.123kb,...</div></div>
 <div class="ttc" id="anamespace_utils_html_a074931515522dbaadc4094a014d1cebe"><div class="ttname"><a href="namespace_utils.html#a074931515522dbaadc4094a014d1cebe">Utils::b2kb</a></div><div class="ttdeci">double b2kb(std::size_t Bytes)</div><div class="ttdoc">Helps to convert a bytes to kbs.</div><div class="ttdef"><b>Definition:</b> Utils.cpp:32</div></div>
 <div class="ttc" id="anamespace_utils_html_a1a8c1f8b95df0aff9510225425d2edec"><div class="ttname"><a href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edec">Utils::Unit</a></div><div class="ttdeci">Unit</div><div class="ttdoc">Describes a unit system for data storing.</div><div class="ttdef"><b>Definition:</b> Utils.h:12</div></div>
 <div class="ttc" id="anamespace_utils_html_a1a8c1f8b95df0aff9510225425d2edeca1c717215e36a6768f37353c8f554a7d8"><div class="ttname"><a href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edeca1c717215e36a6768f37353c8f554a7d8">Utils::Unit::Gb</a></div><div class="ttdeci">@ Gb</div></div>

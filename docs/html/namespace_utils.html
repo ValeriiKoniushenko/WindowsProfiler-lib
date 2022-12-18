@@ -112,6 +112,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a6163616b95ae079814438f1f161bd957"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, <a class="el" href="namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edec">Unit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_utils.html#a6163616b95ae079814438f1f161bd957">b2Fit</a> (std::size_t Bytes)</td></tr>
 <tr class="memdesc:a6163616b95ae079814438f1f161bd957"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helps to convert a set of bytes to the fitting format. 1123byte -&gt; 1.123kb, 2356124 -&gt; 2.356124Mb.  <a href="namespace_utils.html#a6163616b95ae079814438f1f161bd957">More...</a><br /></td></tr>
 <tr class="separator:a6163616b95ae079814438f1f161bd957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051c47dbf28e8598ee0ba2cabf354985"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_utils.html#a051c47dbf28e8598ee0ba2cabf354985">b2FitString</a> (std::size_t Bytes)</td></tr>
+<tr class="memdesc:a051c47dbf28e8598ee0ba2cabf354985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helps to convert a set of bytes to the fitting string format. 1123byte -&gt; 1.123kb, 2356124 -&gt; 2.356124Mb.  <a href="namespace_utils.html#a051c47dbf28e8598ee0ba2cabf354985">More...</a><br /></td></tr>
+<tr class="separator:a051c47dbf28e8598ee0ba2cabf354985"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a1a8c1f8b95df0aff9510225425d2edec" name="a1a8c1f8b95df0aff9510225425d2edec"></a>
@@ -171,7 +174,34 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>std::pair&lt;double, Unit&gt; </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">std::size_t</td><td></td></tr>
+    <tr><td class="paramname">std::size_t</td><td>- count of bites </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a051c47dbf28e8598ee0ba2cabf354985" name="a051c47dbf28e8598ee0ba2cabf354985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a051c47dbf28e8598ee0ba2cabf354985">&#9670;&#160;</a></span>b2FitString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Utils::b2FitString </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>Bytes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helps to convert a set of bytes to the fitting string format. 1123byte -&gt; 1.123kb, 2356124 -&gt; 2.356124Mb. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::size_t</td><td>- count of bites </td></tr>
   </table>
   </dd>
 </dl>
@@ -198,7 +228,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>double - count of Gb </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">std::size_t</td><td></td></tr>
+    <tr><td class="paramname">std::size_t</td><td>- count of bites </td></tr>
   </table>
   </dd>
 </dl>
@@ -225,7 +255,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>double - count of kb </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">std::size_t</td><td>- count of bites </td></tr>
   </table>
   </dd>
 </dl>
@@ -252,7 +282,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>double - count of Mb </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">std::size_t</td><td></td></tr>
+    <tr><td class="paramname">std::size_t</td><td>- count of bites </td></tr>
   </table>
   </dd>
 </dl>
@@ -279,7 +309,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>double - count of Tb </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">std::size_t</td><td></td></tr>
+    <tr><td class="paramname">std::size_t</td><td>- count of bites </td></tr>
   </table>
   </dd>
 </dl>

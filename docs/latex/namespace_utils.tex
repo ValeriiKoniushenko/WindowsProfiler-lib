@@ -26,7 +26,9 @@ double \mbox{\hyperlink{namespace_utils_a1e7951607d67e4c2a1ebce31a2403586}{b2\+G
 double \mbox{\hyperlink{namespace_utils_ad4a2c433ae704a507fe0b5a91857822f}{b2\+Tb}} (std\+::size\+\_\+t Bytes)
 \begin{DoxyCompactList}\small\item\em Helps to convert a bytes to Tbs. \end{DoxyCompactList}\item 
 std\+::pair$<$ double, \mbox{\hyperlink{namespace_utils_a1a8c1f8b95df0aff9510225425d2edec}{Unit}} $>$ \mbox{\hyperlink{namespace_utils_a6163616b95ae079814438f1f161bd957}{b2\+Fit}} (std\+::size\+\_\+t Bytes)
-\begin{DoxyCompactList}\small\item\em Helps to convert a set of bytes to the fitting format. 1123byte -\/\texorpdfstring{$>$}{>} 1.\+123kb, 2356124 -\/\texorpdfstring{$>$}{>} 2.\+356124\+Mb. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Helps to convert a set of bytes to the fitting format. 1123byte -\/\texorpdfstring{$>$}{>} 1.\+123kb, 2356124 -\/\texorpdfstring{$>$}{>} 2.\+356124\+Mb. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespace_utils_a051c47dbf28e8598ee0ba2cabf354985}{b2\+Fit\+String}} (std\+::size\+\_\+t Bytes)
+\begin{DoxyCompactList}\small\item\em Helps to convert a set of bytes to the fitting string format. 1123byte -\/\texorpdfstring{$>$}{>} 1.\+123kb, 2356124 -\/\texorpdfstring{$>$}{>} 2.\+356124\+Mb. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Enumeration Type Documentation}
@@ -80,7 +82,25 @@ std\+::pair$<$double, Unit$>$
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
-{\em std\+::size\+\_\+t} & \\
+{\em std\+::size\+\_\+t} & -\/ count of bites \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_utils_a051c47dbf28e8598ee0ba2cabf354985}\label{namespace_utils_a051c47dbf28e8598ee0ba2cabf354985}} 
+\index{Utils@{Utils}!b2FitString@{b2FitString}}
+\index{b2FitString@{b2FitString}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{b2FitString()}{b2FitString()}}
+{\footnotesize\ttfamily std\+::string Utils\+::b2\+Fit\+String (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{Bytes }\end{DoxyParamCaption})}
+
+
+
+Helps to convert a set of bytes to the fitting string format. 1123byte -\/\texorpdfstring{$>$}{>} 1.\+123kb, 2356124 -\/\texorpdfstring{$>$}{>} 2.\+356124\+Mb. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::size\+\_\+t} & -\/ count of bites \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{namespace_utils_a1e7951607d67e4c2a1ebce31a2403586}\label{namespace_utils_a1e7951607d67e4c2a1ebce31a2403586}} 
@@ -98,7 +118,7 @@ double -\/ count of Gb
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
-{\em std\+::size\+\_\+t} & \\
+{\em std\+::size\+\_\+t} & -\/ count of bites \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{namespace_utils_a074931515522dbaadc4094a014d1cebe}\label{namespace_utils_a074931515522dbaadc4094a014d1cebe}} 
@@ -116,7 +136,7 @@ double -\/ count of kb
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
-{\em } & \\
+{\em std\+::size\+\_\+t} & -\/ count of bites \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{namespace_utils_a5a938350859b8b6194bdfc47e5324306}\label{namespace_utils_a5a938350859b8b6194bdfc47e5324306}} 
@@ -134,7 +154,7 @@ double -\/ count of Mb
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
-{\em std\+::size\+\_\+t} & \\
+{\em std\+::size\+\_\+t} & -\/ count of bites \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{namespace_utils_ad4a2c433ae704a507fe0b5a91857822f}\label{namespace_utils_ad4a2c433ae704a507fe0b5a91857822f}} 
@@ -152,7 +172,7 @@ double -\/ count of Tb
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
-{\em std\+::size\+\_\+t} & \\
+{\em std\+::size\+\_\+t} & -\/ count of bites \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{namespace_utils_a3ef1777d4ea4fb42df165ab306868d39}\label{namespace_utils_a3ef1777d4ea4fb42df165ab306868d39}} 

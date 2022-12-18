@@ -61,4 +61,10 @@ std::pair<double, Unit> b2Fit(std::size_t Bytes)
 	return {result, static_cast<Unit>(Units)};
 }
 
+std::string b2FitString(std::size_t Bytes)
+{
+	auto Data = b2Fit(Bytes);
+	return std::to_string(Data.first) + " " + Uits2String(Data.second);
+}
+
 }	 // namespace Utils
