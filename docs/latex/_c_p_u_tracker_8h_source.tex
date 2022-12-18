@@ -6,33 +6,45 @@
 \DoxyCodeLine{2 }
 \DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Object.h"{}}}
 \DoxyCodeLine{4 }
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <Windows.h>}}
-\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <tlhelp32.h>}}
-\DoxyCodeLine{8 }
-\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_object}{Object}}}
-\DoxyCodeLine{13 \{}
-\DoxyCodeLine{14 \textcolor{keyword}{public}:}
-\DoxyCodeLine{15     \mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}(HANDLE\& Handle);}
-\DoxyCodeLine{16     \mbox{\hyperlink{class_c_p_u_tracker_adfd0dc510c6791891d247362ab751dd7}{\string~CPUTracker}}();}
-\DoxyCodeLine{17     \mbox{\hyperlink{class_c_p_u_tracker_a18e98191b2c666f5f62c019c1a9f8902}{CPUTracker}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}\&) = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{18     \mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}\& \mbox{\hyperlink{class_c_p_u_tracker_a57b106eb357a8caa92f58741723808e8}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}\&) = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{19     \mbox{\hyperlink{class_c_p_u_tracker_a3bb569ac7d644c3e3d045e5efb9fe011}{CPUTracker}}(\mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}\&\&) = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{20     \mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}\& \mbox{\hyperlink{class_c_p_u_tracker_a26c48a452dcf1bfe2cf7ee246b765b12}{operator=}}(\mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}\&\&) = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{21 }
-\DoxyCodeLine{27     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_p_u_tracker_a67e001f840f756f897ab572ea89f80b3}{ClearData}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{28 }
-\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_p_u_tracker_aeb617394e34d899de64ff94587d3656d}{InitCPUTracker}}();}
-\DoxyCodeLine{35 }
-\DoxyCodeLine{41     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_c_p_u_tracker_a6d14abb9a340ca71f7c9a6de22569499}{GetCpuUsage}}();}
-\DoxyCodeLine{42 }
-\DoxyCodeLine{48     std::string \mbox{\hyperlink{class_c_p_u_tracker_a80daf6532837855fb2e707ab48b2a9c8}{GetPriority}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{49 }
-\DoxyCodeLine{50 \textcolor{keyword}{private}:}
-\DoxyCodeLine{51     HANDLE* Handle\{\};}
-\DoxyCodeLine{52     ULARGE\_INTEGER LastCPU\{\};}
-\DoxyCodeLine{53     ULARGE\_INTEGER LastSysCPU\{\};}
-\DoxyCodeLine{54     ULARGE\_INTEGER LastUserCPU\{\};}
-\DoxyCodeLine{55 \};}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <Windows.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <tlhelp32.h>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_object}{Object}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}(HANDLE\& Handle);}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_c_p_u_tracker_adfd0dc510c6791891d247362ab751dd7}{\string~CPUTracker}}();}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_c_p_u_tracker_a18e98191b2c666f5f62c019c1a9f8902}{CPUTracker}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}\& \mbox{\hyperlink{class_c_p_u_tracker_a57b106eb357a8caa92f58741723808e8}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_c_p_u_tracker_a3bb569ac7d644c3e3d045e5efb9fe011}{CPUTracker}}(\mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}\&\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}\& \mbox{\hyperlink{class_c_p_u_tracker_a26c48a452dcf1bfe2cf7ee246b765b12}{operator=}}(\mbox{\hyperlink{class_c_p_u_tracker}{CPUTracker}}\&\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{26     \textcolor{keyword}{enum class} \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21}{Priority}}}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a6adf97f83acf6453d4a6a4b1070f3754}{None}},}
+\DoxyCodeLine{29         \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21ae599161956d626eda4cb0a5ffb85271c}{Idle}} = IDLE\_PRIORITY\_CLASS,}
+\DoxyCodeLine{30         \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21ab59972ff632793f205ffc303eba53481}{BelowNormal}} = BELOW\_NORMAL\_PRIORITY\_CLASS,}
+\DoxyCodeLine{31         \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a960b44c579bc2f6818d2daaf9e4c16f0}{Normal}} = NORMAL\_PRIORITY\_CLASS,}
+\DoxyCodeLine{32         \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a930ee274ea2e4d208702d4695b3ec0f4}{AboveNormal}} = ABOVE\_NORMAL\_PRIORITY\_CLASS,}
+\DoxyCodeLine{33         \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a655d20c1ca69519ca647684edbb2db35}{High}} = HIGH\_PRIORITY\_CLASS,}
+\DoxyCodeLine{34         \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21ad50ae798e3aa50c3a502118e759cc216}{RealTime}} = REALTIME\_PRIORITY\_CLASS}
+\DoxyCodeLine{35     \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{42     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_p_u_tracker_a67e001f840f756f897ab572ea89f80b3}{ClearData}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_p_u_tracker_aeb617394e34d899de64ff94587d3656d}{InitCPUTracker}}();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{56     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_c_p_u_tracker_a6d14abb9a340ca71f7c9a6de22569499}{GetCpuUsage}}();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{63     \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21}{Priority}} \mbox{\hyperlink{class_c_p_u_tracker_ae5eff54689e2a0296e10e58e50e0ba9f}{GetPriority}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{keyword}{private}:}
+\DoxyCodeLine{66     HANDLE* Handle\{\};}
+\DoxyCodeLine{67     ULARGE\_INTEGER LastCPU\{\};}
+\DoxyCodeLine{68     ULARGE\_INTEGER LastSysCPU\{\};}
+\DoxyCodeLine{69     ULARGE\_INTEGER LastUserCPU\{\};}
+\DoxyCodeLine{70 \};}
 
 \end{DoxyCode}

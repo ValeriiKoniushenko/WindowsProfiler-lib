@@ -2,9 +2,10 @@
 
 #include "Object.h"
 
-#include <string>
 #include <Windows.h>
 #include <tlhelp32.h>
+
+#include <string>
 
 /**
  * @brief Allows to track CPU data
@@ -18,6 +19,20 @@ public:
 	CPUTracker& operator=(const CPUTracker&) = default;
 	CPUTracker(CPUTracker&&) = default;
 	CPUTracker& operator=(CPUTracker&&) = default;
+
+	/**
+	 * @brief Process priority
+	 */
+	enum class Priority
+	{
+		None,
+		Idle = IDLE_PRIORITY_CLASS,
+		BelowNormal = BELOW_NORMAL_PRIORITY_CLASS,
+		Normal = NORMAL_PRIORITY_CLASS,
+		AboveNormal = ABOVE_NORMAL_PRIORITY_CLASS,
+		High = HIGH_PRIORITY_CLASS,
+		RealTime = REALTIME_PRIORITY_CLASS
+	};
 
 	/**
 	 * @brief Try to clear data for overloaded operator= and for copy\move constructs
@@ -45,7 +60,7 @@ public:
 	 * @return std::string
 	 * @param void
 	 */
-	std::string GetPriority() const;
+	Priority GetPriority() const;
 
 private:
 	HANDLE* Handle{};

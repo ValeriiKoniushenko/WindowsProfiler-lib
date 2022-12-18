@@ -1,5 +1,7 @@
 #pragma once
 
+#include "CPUTracker.h"
+
 #include <cstdlib>
 #include <string>
 #include <utility>
@@ -65,5 +67,12 @@ std::pair<double, Unit> b2Fit(std::size_t Bytes);
  * @param std::size_t - count of bites
  */
 std::string b2FitString(std::size_t Bytes);
+
+/**
+ * @brief Helps to convert a CPUTracker::Priority to std::string
+ * @return std::string
+ * @param CPUTracker::Priority
+ */
+std::string Priority2String(CPUTracker::Priority Priority);
 
 }	 // namespace Utils

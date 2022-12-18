@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unit_0',['Unit',['../namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edec',1,'Utils']]]
+  ['priority_0',['Priority',['../class_c_p_u_tracker.html#ae15a9160eb37885ef885fdb9ae4a6f21',1,'CPUTracker']]]
 ];

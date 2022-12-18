@@ -15,6 +15,20 @@ Inheritance diagram for CPUTracker\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_c_p_u_tracker}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21}{Priority}} \{ \newline
+\mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21ae599161956d626eda4cb0a5ffb85271c}{Idle}} = IDLE\+\_\+\+PRIORITY\+\_\+\+CLASS
+, \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21ab59972ff632793f205ffc303eba53481}{Below\+Normal}} = BELOW\+\_\+\+NORMAL\+\_\+\+PRIORITY\+\_\+\+CLASS
+, \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a960b44c579bc2f6818d2daaf9e4c16f0}{Normal}} = NORMAL\+\_\+\+PRIORITY\+\_\+\+CLASS
+, \newline
+\mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a930ee274ea2e4d208702d4695b3ec0f4}{Above\+Normal}} = ABOVE\+\_\+\+NORMAL\+\_\+\+PRIORITY\+\_\+\+CLASS
+, \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a655d20c1ca69519ca647684edbb2db35}{High}} = HIGH\+\_\+\+PRIORITY\+\_\+\+CLASS
+, \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21ad50ae798e3aa50c3a502118e759cc216}{Real\+Time}} = REALTIME\+\_\+\+PRIORITY\+\_\+\+CLASS
+ \}
+\begin{DoxyCompactList}\small\item\em Process priority. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,13 +50,56 @@ void \mbox{\hyperlink{class_c_p_u_tracker_aeb617394e34d899de64ff94587d3656d}{Ini
 \begin{DoxyCompactList}\small\item\em Init CPU tracker. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_c_p_u_tracker_a6d14abb9a340ca71f7c9a6de22569499}{Get\+Cpu\+Usage}} ()
 \begin{DoxyCompactList}\small\item\em return a current CPU usage in percent \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{class_c_p_u_tracker_a80daf6532837855fb2e707ab48b2a9c8}{Get\+Priority}} () const
+\mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21}{Priority}} \mbox{\hyperlink{class_c_p_u_tracker_ae5eff54689e2a0296e10e58e50e0ba9f}{Get\+Priority}} () const
 \begin{DoxyCompactList}\small\item\em returns a process priority \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
 Allows to track CPU data. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21}\label{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21}} 
+\index{CPUTracker@{CPUTracker}!Priority@{Priority}}
+\index{Priority@{Priority}!CPUTracker@{CPUTracker}}
+\doxysubsubsection{\texorpdfstring{Priority}{Priority}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21}{CPUTracker\+::\+Priority}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Process priority. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!CPUTracker@{CPUTracker}}\index{CPUTracker@{CPUTracker}!None@{None}}}\mbox{\Hypertarget{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a6adf97f83acf6453d4a6a4b1070f3754}\label{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Idle@{Idle}!CPUTracker@{CPUTracker}}\index{CPUTracker@{CPUTracker}!Idle@{Idle}}}\mbox{\Hypertarget{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21ae599161956d626eda4cb0a5ffb85271c}\label{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21ae599161956d626eda4cb0a5ffb85271c}} 
+Idle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BelowNormal@{BelowNormal}!CPUTracker@{CPUTracker}}\index{CPUTracker@{CPUTracker}!BelowNormal@{BelowNormal}}}\mbox{\Hypertarget{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21ab59972ff632793f205ffc303eba53481}\label{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21ab59972ff632793f205ffc303eba53481}} 
+Below\+Normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Normal@{Normal}!CPUTracker@{CPUTracker}}\index{CPUTracker@{CPUTracker}!Normal@{Normal}}}\mbox{\Hypertarget{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a960b44c579bc2f6818d2daaf9e4c16f0}\label{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a960b44c579bc2f6818d2daaf9e4c16f0}} 
+Normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AboveNormal@{AboveNormal}!CPUTracker@{CPUTracker}}\index{CPUTracker@{CPUTracker}!AboveNormal@{AboveNormal}}}\mbox{\Hypertarget{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a930ee274ea2e4d208702d4695b3ec0f4}\label{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a930ee274ea2e4d208702d4695b3ec0f4}} 
+Above\+Normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{High@{High}!CPUTracker@{CPUTracker}}\index{CPUTracker@{CPUTracker}!High@{High}}}\mbox{\Hypertarget{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a655d20c1ca69519ca647684edbb2db35}\label{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21a655d20c1ca69519ca647684edbb2db35}} 
+High&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RealTime@{RealTime}!CPUTracker@{CPUTracker}}\index{CPUTracker@{CPUTracker}!RealTime@{RealTime}}}\mbox{\Hypertarget{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21ad50ae798e3aa50c3a502118e759cc216}\label{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21ad50ae798e3aa50c3a502118e759cc216}} 
+Real\+Time&\\
+\hline
+
+\end{DoxyEnumFields}
+
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_c_p_u_tracker_a40ac8a7ff6b1a450bf80517855392b32}\label{class_c_p_u_tracker_a40ac8a7ff6b1a450bf80517855392b32}} 
@@ -112,11 +169,11 @@ void
 {\em void} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_c_p_u_tracker_a80daf6532837855fb2e707ab48b2a9c8}\label{class_c_p_u_tracker_a80daf6532837855fb2e707ab48b2a9c8}} 
+\mbox{\Hypertarget{class_c_p_u_tracker_ae5eff54689e2a0296e10e58e50e0ba9f}\label{class_c_p_u_tracker_ae5eff54689e2a0296e10e58e50e0ba9f}} 
 \index{CPUTracker@{CPUTracker}!GetPriority@{GetPriority}}
 \index{GetPriority@{GetPriority}!CPUTracker@{CPUTracker}}
 \doxysubsubsection{\texorpdfstring{GetPriority()}{GetPriority()}}
-{\footnotesize\ttfamily std\+::string CPUTracker\+::\+Get\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_p_u_tracker_ae15a9160eb37885ef885fdb9ae4a6f21}{CPUTracker\+::\+Priority}} CPUTracker\+::\+Get\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 

@@ -66,9 +66,7 @@ CPUTracker::~CPUTracker()
 	ClearData();
 }
 
-std::string CPUTracker::GetPriority() const
+CPUTracker::Priority CPUTracker::GetPriority() const
 {
-	auto PriorityClass = GetPriorityClass(*Handle);
-
-	return std::string();
+	return static_cast<Priority>(GetPriorityClass(*Handle));
 }

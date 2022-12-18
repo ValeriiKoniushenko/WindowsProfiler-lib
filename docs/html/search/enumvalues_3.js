@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mb_0',['Mb',['../namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edeca6dd757cbdd852a16f222a7d1a07eab3e',1,'Utils']]]
+  ['high_0',['High',['../class_c_p_u_tracker.html#ae15a9160eb37885ef885fdb9ae4a6f21a655d20c1ca69519ca647684edbb2db35',1,'CPUTracker']]]
 ];

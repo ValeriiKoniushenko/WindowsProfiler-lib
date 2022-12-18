@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tb_0',['Tb',['../namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edecabd63cda5e59ddb168ec03847f26b831b',1,'Utils']]]
+  ['idle_0',['Idle',['../class_c_p_u_tracker.html#ae15a9160eb37885ef885fdb9ae4a6f21ae599161956d626eda4cb0a5ffb85271c',1,'CPUTracker']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['mb_0',['Mb',['../namespace_utils.html#a1a8c1f8b95df0aff9510225425d2edeca6dd757cbdd852a16f222a7d1a07eab3e',1,'Utils']]],
-  ['memorytracker_1',['MemoryTracker',['../class_memory_tracker.html',1,'MemoryTracker'],['../class_memory_tracker.html#a4cda72a1950c4a62f384f004f1e09668',1,'MemoryTracker::MemoryTracker(HANDLE &amp;Handle)'],['../class_memory_tracker.html#a0fb34471767b4e93b611a801a97b6a40',1,'MemoryTracker::MemoryTracker(const MemoryTracker &amp;)=default'],['../class_memory_tracker.html#a01c7dc3c1d2c1e8581849188ab60fee5',1,'MemoryTracker::MemoryTracker(MemoryTracker &amp;&amp;)=default']]]
+  ['idle_0',['Idle',['../class_c_p_u_tracker.html#ae15a9160eb37885ef885fdb9ae4a6f21ae599161956d626eda4cb0a5ffb85271c',1,'CPUTracker']]],
+  ['initcputracker_1',['InitCPUTracker',['../class_c_p_u_tracker.html#aeb617394e34d899de64ff94587d3656d',1,'CPUTracker']]],
+  ['isopened_2',['IsOpened',['../class_raw_process.html#ab76083ddb2c9c24feab050af95885530',1,'RawProcess']]]
 ];

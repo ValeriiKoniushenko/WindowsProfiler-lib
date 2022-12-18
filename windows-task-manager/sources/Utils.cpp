@@ -67,4 +67,24 @@ std::string b2FitString(std::size_t Bytes)
 	return std::to_string(Data.first) + " " + Uits2String(Data.second);
 }
 
+std::string Priority2String(CPUTracker::Priority Priority)
+{
+	switch (Priority)
+	{
+		case CPUTracker::Priority::Idle:
+			return "Idle";
+		case CPUTracker::Priority::BelowNormal:
+			return "Below normal";
+		case CPUTracker::Priority::Normal:
+			return "Normal";
+		case CPUTracker::Priority::AboveNormal:
+			return "Above normal";
+		case CPUTracker::Priority::High:
+			return "High";
+		case CPUTracker::Priority::RealTime:
+			return "Real Time";
+	}
+	return "None";
+}
+
 }	 // namespace Utils
