@@ -2,6 +2,7 @@
 ## ⭐ Intro
 Hello everyone! If you read this page, you need one tool to get more control over your system, and this one tool, I hope, is this lib.
 Just download it or clone it and connect it to your project like opensource or ```.lib\include files.```
+![Animation](https://github.com/ValeriiKoniushenko/WindowsProfiler-lib/assets/99877553/f3488d64-4b54-436e-840e-f0d2ee27e17e)
 
 ## 🔧 Installation steps
 1. Press the green button at the top of this page ```Code```.
