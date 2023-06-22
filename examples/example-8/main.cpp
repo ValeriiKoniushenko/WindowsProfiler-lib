@@ -1,21 +1,3 @@
-# Windows Task Manger [lib]
-## ⭐ Intro
-Hello everyone! If you read this page, you need one tool to get more control over your system, and this one tool, I hope, is this lib.
-Just download it or clone it and connect it to your project like opensource or ```.lib\include files.```
-
-## 🔧 Installation steps
-1. Press the green button at the top of this page ```Code```.
-2. Copy the link.
-3. Open the terminal window.
-4. Go to the correct directory using the command ```cd```.
-5. Write ```git clone ```(don't forget about a space) and paste the link.
-6. Press ```Enter```
-7. Open the folder ```WindowsProfiler-lib``` using some IDE: Clion, Visual Studio, etc.
-8. Compile the library using a hot-key ```Ctrl + Shift + B``` or ```Ctrl + B``` or using the build menu at the top of your screen.
-
-## 👨‍💻 Example
-More accessible examples with details can find in the folder 'example'. But now I'll try to show all abilities of this lib.
-```c++
 #include "TaskManager.h"
 #include "Utils.h"
 
@@ -60,10 +42,11 @@ int main()
 	while (1)
 	{
 		Sleep(1000);
+
 		Tasker.Scan();
 
 		auto Data = Tasker.ExtrudeStatisticsFromProcesses();
-		Data.erase(std::remove_if(Data.begin(), Data.end(), [](auto& a) { return a.RAMUsage < 1024 * 1024 * 1024; }), Data.end());
+		Data.erase(std::remove_if(Data.begin(), Data.end(), [](auto& a) { return a.RAMUsage < 1024 * 1024; }), Data.end());
 		std::sort(Data.begin(), Data.end(), [](auto& a, auto& b) { return a.PID < b.PID; });
 
 		printHeader();
@@ -79,7 +62,3 @@ int main()
 
 	return 0;
 }
-```
-
-## 📞 Feedback & Contacts
-You can send me e-mail: Valerii.Koniushenko@gmail.com or try to find me in telegram: @markmoran24
