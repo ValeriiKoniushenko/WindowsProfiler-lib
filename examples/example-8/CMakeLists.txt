@@ -1,7 +1,7 @@
 
-add_executable(Example7 main.cpp)
+add_executable(Example8 main.cpp)
 
 target_link_libraries(
-	Example7 PUBLIC
+	Example8 PUBLIC
 	WindowsTaskManager
 )

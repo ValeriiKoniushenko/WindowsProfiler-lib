@@ -41,13 +41,13 @@ int main()
 
 	while (1)
 	{
-		Sleep(1000);
+		Sleep(100);
 
 		Tasker.Scan();
 
 		auto Data = Tasker.ExtrudeStatisticsFromProcesses();
-		Data.erase(std::remove_if(Data.begin(), Data.end(), [](auto& a) { return a.RAMUsage < 1024 * 1024; }), Data.end());
-		std::sort(Data.begin(), Data.end(), [](auto& a, auto& b) { return a.PID < b.PID; });
+		std::sort(Data.begin(), Data.end(), [](auto& a, auto& b) { return a.RAMUsage > b.RAMUsage; });
+		Data.resize(10);
 
 		printHeader();
 		for (auto& Stat : Data)
